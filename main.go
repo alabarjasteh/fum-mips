@@ -1,7 +1,8 @@
 package main
 
 import (
-	"fmt"
+	"log"
+	"time"
 
 	"github.com/alabarjasteh/mips-simulator/mips"
 )
@@ -12,45 +13,39 @@ func main() {
 	mem := mips.NewMemory()
 	cpu := mips.NewCPU(mem)
 
-	for {
-		_, instData := cpu.Fetch()
-		instruction, err := cpu.Decode(instData)
-		if err != nil {
-			fmt.Printf("error: %v", err)
-			return
+	ticker := time.NewTicker(time.Second)
+	done := make(chan bool)
+
+	fetchClockChan := make(chan string)
+	decodeClockChan := make(chan string)
+	executeClockChan := make(chan string)
+	memoryClockChan := make(chan string)
+	writebackClockChan := make(chan string)
+
+	ifDecChan := make(chan mips.IfDec, 1) // write to chan is not blocking.
+	decExcChan := make(chan mips.DecExc, 1)
+	exMemChan := make(chan mips.ExMem, 1)
+	memWBChan := make(chan mips.MemWB, 1)
+
+	go func() {
+		for {
+			<-ticker.C
+			log.Print("\n\nTik...")
+
+			writebackClockChan <- "tik"
+			memoryClockChan <- "tik"
+			executeClockChan <- "tik"
+			decodeClockChan <- "tik"
+			fetchClockChan <- "tik"
 		}
-		err = cpu.Execute(instruction)
-		if err != nil {
-			fmt.Printf("error: %v", err)
-			return
-		}
-	}
+	}()
+
+	// run stages in parallel
+	go cpu.Fetch(fetchClockChan, ifDecChan)
+	go cpu.Decode(decodeClockChan, ifDecChan, decExcChan)
+	go cpu.Execute(executeClockChan, decExcChan, exMemChan)
+	go cpu.Memory(memoryClockChan, exMemChan, memWBChan)
+	go cpu.Writeback(writebackClockChan, memWBChan)
+
+	<-done
 }
-
-// func fetchBurst(pc *int, mem *memory.Mem, reg *register.IfDec) {
-// 	inst, err := mem.FetchInstruction(*pc)
-// 	if err != nil {
-// 		log.Fatal(err)
-// 	}
-// 	reg.IR = inst
-// 	log.Printf("IR : %v", reg.IR)
-// 	*pc += 4
-// 	reg.NPC = *pc
-// }
-
-// func decodeBurst(rf *register.File, ifDec *register.IfDec, decEx *register.DecEx) {
-// 	r1, r2 := getReadingRegisters(rf, ifDec.IR)
-// 	imm := extractImmediate(ifDec.IR)
-// 	decEx.IR = ifDec.IR
-// 	decEx.NPC = ifDec.NPC
-// 	decEx.R1 = r1
-// 	decEx.R2 = r2
-// 	decEx.Imm = imm
-// }
-
-// func executeBurst() {
-
-// }
-
-// func memoryBurst()    {}
-// func writebackBurst() {}

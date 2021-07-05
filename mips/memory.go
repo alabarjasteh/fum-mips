@@ -2,7 +2,6 @@ package mips
 
 import (
 	"bufio"
-	"fmt"
 	"log"
 	"os"
 	"strconv"
@@ -26,12 +25,16 @@ func (mem Memory) loadMemoryFromFile() {
 	scanner := bufio.NewScanner(file)
 	i := 0
 	for scanner.Scan() {
-		val, err := strconv.ParseInt(scanner.Text(), 2, 64)
+		text := scanner.Text()
+		if len(text) == 0 {
+			i += 4
+			continue
+		}
+		val, err := strconv.ParseInt(text, 2, 64)
 		if err != nil {
 			log.Fatal("cannot parse memory state from file")
 		}
 		mem[i] = int(val)
-		fmt.Printf("mem: %b\n", mem[i])
 		i += 4
 	}
 	if err := scanner.Err(); err != nil {

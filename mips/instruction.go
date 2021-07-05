@@ -9,8 +9,8 @@ var FunctionTypeRMap = map[int]FunctionTypeR{
 }
 
 var FunctionTypeIMap = map[int]FunctionTypeI{
-	0b101011: Sw,
-	0b100011: Lw,
+	0b101011: SwAddrCalc,
+	0b100011: LwAddrCalc,
 	0b001000: Addi,
 	0b001010: Slti,
 	0b001100: Andi,
@@ -29,14 +29,24 @@ type InstructionTypeR struct {
 	TargetRegister      int
 	DestinationRegister int
 	FuncCode            int
-
-	Function func(cpu *CPU, rs int, rt int, rd int) error
+	AluFunc             FunctionTypeR
 }
 
 type InstructionTypeI struct {
 	SourceRegister int
 	TargetRegister int
 	Immediate      int
+	AluFunc        FunctionTypeI
+}
 
-	Function func(cpu *CPU, rs int, rt int, imm int) error
+func (ins *Instruction) IsLoadStore() (bool, string) {
+	if ins.OpcodeType == OpcodeTypeI {
+		if ins.Opcode == 0b101011 {
+			return true, "SW"
+		}
+		if ins.Opcode == 0b100011 {
+			return true, "LW"
+		}
+	}
+	return false, ""
 }
