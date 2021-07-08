@@ -11,7 +11,7 @@ import (
 type Instruction int64
 
 func main() {
-	memFile := flag.String("file", "memory_state3.txt", "initiating memory state")
+	memFile := flag.String("file", "array-max-min.txt", "initiating memory state")
 	flag.Parse()
 	log.Printf("Load memory from: %v\n", *memFile)
 
