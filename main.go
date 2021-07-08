@@ -1,6 +1,7 @@
 package main
 
 import (
+	"flag"
 	"log"
 	"time"
 
@@ -10,19 +11,23 @@ import (
 type Instruction int64
 
 func main() {
-	mem := mips.NewMemory()
+	memFile := flag.String("file", "memory_state3.txt", "initiating memory state")
+	flag.Parse()
+	log.Printf("Load memory from: %v\n", *memFile)
+
+	mem := mips.NewMemory(*memFile)
 	cpu := mips.NewCPU(mem)
 
 	ticker := time.NewTicker(time.Second)
 	done := make(chan bool)
 
-	fetchClockChan := make(chan string)
+	fetchClockChan := make(chan string) // blocking channels, for synchronization of pipeline stages
 	decodeClockChan := make(chan string)
 	executeClockChan := make(chan string)
 	memoryClockChan := make(chan string)
 	writebackClockChan := make(chan string)
 
-	ifDecChan := make(chan mips.IfDec, 1) // write to chan is not blocking.
+	ifDecChan := make(chan mips.IfDec, 1) // non-blocking channels with buffers size = 1. These act as inter-stage's registers.
 	decExcChan := make(chan mips.DecExc, 1)
 	exMemChan := make(chan mips.ExMem, 1)
 	memWBChan := make(chan mips.MemWB, 1)
@@ -30,7 +35,7 @@ func main() {
 	go func() {
 		for {
 			<-ticker.C
-			log.Print("\n\nTik...")
+			log.Println("\n\nTik...")
 
 			writebackClockChan <- "tik"
 			memoryClockChan <- "tik"

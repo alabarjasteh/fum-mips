@@ -6,16 +6,22 @@ type IfDec struct {
 }
 
 type DecExc struct {
-	instruction *Instruction
+	NPC         int
+	Instruction *Instruction
+	Rs          int32
+	Rt          int32
+	Rd          int32
 }
 
 type ExMem struct {
-	instruction *Instruction
-	aluOut      int32
+	NPC         int
+	Instruction *Instruction
+	Rt          int32
+	AluOut      int32
+	BranchAddr  int
 }
 
 type MemWB struct {
-	instruction  *Instruction
-	data         int32
-	needsToWrite bool
+	Instruction *Instruction
+	Data        int32
 }

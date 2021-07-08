@@ -9,14 +9,14 @@ import (
 
 type Memory map[int]int // map[PC]Data
 
-func NewMemory() Memory {
+func NewMemory(fileName string) Memory {
 	mem := Memory{}
-	mem.loadMemoryFromFile()
+	mem.loadMemoryFromFile(fileName)
 	return mem
 }
 
-func (mem Memory) loadMemoryFromFile() {
-	file, err := os.Open("./memory_state1.txt")
+func (mem Memory) loadMemoryFromFile(fileName string) {
+	file, err := os.Open("./" + fileName)
 	if err != nil {
 		log.Fatalf("failed to open")
 
