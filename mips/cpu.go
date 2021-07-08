@@ -33,20 +33,20 @@ func (cpu *CPU) Fetch(clockChan chan string, outChan chan IfDec) {
 		instName := InstructionName[IR>>26]
 
 		if cpu.Stall {
-			log.Println("Fetch -> Stall")
+			log.Println("Fetch	-> Stall")
 			continue
 		}
 
 		if len(cpu.BranchesInPipeline) != 0 {
-			log.Println("Fetch -> Killed")
+			log.Println("Fetch	-> Killed <Branch in the pipeline>")
 			continue
 		}
 
 		if !ok {
-			log.Printf("Fetch -> PC: %v, no instruction to fetch", cpu.PC)
+			log.Printf("Fetch	-> PC: %v, no instruction to fetch", cpu.PC)
 			continue
 		}
-		log.Printf("Fetch -> PC: %v, instruction: %v", cpu.PC, assembly)
+		log.Printf("Fetch	-> PC: %v, %v", cpu.PC, assembly)
 
 		// if instruction is 'unconditional jump', change PC to target
 		if instName == "J" {
@@ -85,7 +85,7 @@ func (cpu *CPU) Decode(clockChan chan string, inChan chan IfDec, outChan chan De
 			}
 			var decExc DecExc
 
-			log.Printf("Decode -> %v", assembly)
+			log.Printf("Decode 	-> %v", assembly)
 
 			switch opcodeType {
 			case OpcodeTypeR:
@@ -124,7 +124,7 @@ func (cpu *CPU) Decode(clockChan chan string, inChan chan IfDec, outChan chan De
 			outChan <- decExc
 
 		default:
-			log.Println("Decode -> NOP")
+			log.Println("Decode 	-> NOP")
 		}
 
 	}
@@ -153,10 +153,10 @@ func (cpu *CPU) Execute(clockChan chan string, inChan chan DecExc, outChan chan 
 
 			time.Sleep(time.Millisecond * 100)
 			outChan <- ExMem{NPC: NPC, Instruction: instruction, Rt: rt, AluOut: aluOut, BranchAddr: branchAddr}
-			log.Printf("Execute -> %v, aluOut: %v", assembly, aluOut)
+			log.Printf("Execute	-> %v, aluOut: %v", assembly, aluOut)
 
 		default:
-			log.Println("Execute -> NOP")
+			log.Println("Execute	-> NOP")
 		}
 	}
 }
@@ -176,32 +176,34 @@ func (cpu *CPU) Memory(clockChan chan string, inChan chan ExMem, outChan chan Me
 			case "LW":
 				memoryData := int32(cpu.Mem[int(aluOut)])
 				memWB.Data = memoryData
-				log.Printf("Memory -> %v, load %v into R$%v", assembly, memoryData, instruction.TypeI.TargetRegister)
+				log.Printf("Memory	-> %v, load %v from memory loction(%v)", assembly, memoryData, aluOut)
 
 			case "SW":
 				cpu.Mem[int(aluOut)] = int(in.Rt)
-				log.Printf("Memory -> %v, writes %v into memory location (%v)", assembly, in.Rt, aluOut)
+				log.Printf("Memory	-> %v, writes %v into memory location (%v)", assembly, in.Rt, aluOut)
 
 			case "BEQ", "BNE":
 				if aluOut == 1 { // branch is taken
 					time.Sleep(time.Millisecond * 100)
 					cpu.PC = branchAddr
+					log.Printf("Memory	-> %v, branch is taken", assembly)
+				} else {
+					log.Printf("Memory	-> %v, branch is NOT taken", assembly)
 				}
 				// Pop from list
 				cpu.BranchesInPipeline = cpu.BranchesInPipeline[:len(cpu.BranchesInPipeline)-1]
 				memWB.Data = aluOut
-				log.Printf("Memory -> %v", assembly)
 
 			default:
 				memWB.Data = aluOut
-				log.Printf("Memory -> %v", assembly)
+				log.Printf("Memory	-> %v", assembly)
 			}
 
 			time.Sleep(time.Millisecond * 100)
 			outChan <- memWB
 
 		default:
-			log.Println("Memory -> NOP")
+			log.Println("Memory	-> NOP")
 		}
 	}
 }
@@ -220,21 +222,21 @@ func (cpu *CPU) Writeback(clockChan chan string, inChan chan MemWB) {
 			case OpcodeTypeR:
 				cpu.RegFile[instruction.TypeR.DestinationRegister] = data
 				cpu.updateScoreBoard(instruction, "writeback")
-				log.Printf("Writeback -> %v,  writes %v into R$%v", assembly, data, instruction.TypeR.DestinationRegister)
+				log.Printf("Writeback	-> %v,  writes %v into R$%v", assembly, data, instruction.TypeR.DestinationRegister)
 
 			case OpcodeTypeI:
 				if instName == "SW" || instName == "BEQ" || instName == "BNE" {
-					log.Printf("Writeback -> %v ,no write to register file", assembly)
+					log.Printf("Writeback	-> %v ,no write to register file", assembly)
 					continue
 				}
 				cpu.RegFile[instruction.TypeI.TargetRegister] = data
 				cpu.updateScoreBoard(instruction, "writeback")
-				log.Printf("Writeback -> %v,  writes %v into R$%v", assembly, data, instruction.TypeI.TargetRegister)
+				log.Printf("Writeback	-> %v,  writes %v into R$%v", assembly, data, instruction.TypeI.TargetRegister)
 
 			}
 
 		default:
-			log.Println("Writeback -> NOP")
+			log.Println("Writeback	-> NOP")
 		}
 	}
 }

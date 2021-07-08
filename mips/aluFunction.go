@@ -77,7 +77,7 @@ func BeqBranchCond(cpu *CPU, rs int32, rt int32, imm int) (aluOut int32) {
 }
 
 func BneBranchCond(cpu *CPU, rs int32, rt int32, imm int) (aluOut int32) {
-	if rs == rt {
+	if rs != rt {
 		return 1
 	}
 	return 0

@@ -18,7 +18,7 @@ func main() {
 	mem := mips.NewMemory(*memFile)
 	cpu := mips.NewCPU(mem)
 
-	ticker := time.NewTicker(time.Second)
+	ticker := time.NewTicker(time.Millisecond * 200)
 	done := make(chan bool)
 
 	fetchClockChan := make(chan string) // blocking channels, for synchronization of pipeline stages
