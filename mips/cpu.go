@@ -5,7 +5,7 @@ import (
 	"time"
 )
 
-type CPU struct {
+type CPU struct { // no mutex is needed, all accesses to share data are sequential.
 	PC                 int
 	Mem                Memory
 	RegFile            [32]int32

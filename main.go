@@ -8,8 +8,6 @@ import (
 	"github.com/alabarjasteh/mips-simulator/mips"
 )
 
-type Instruction int64
-
 func main() {
 	memFile := flag.String("file", "array-max-min.txt", "initiating memory state")
 	flag.Parse()
@@ -18,7 +16,7 @@ func main() {
 	mem := mips.NewMemory(*memFile)
 	cpu := mips.NewCPU(mem)
 
-	ticker := time.NewTicker(time.Millisecond * 200)
+	ticker := time.NewTicker(time.Millisecond * 500)
 	done := make(chan bool)
 
 	fetchClockChan := make(chan string) // blocking channels, for synchronization of pipeline stages
@@ -27,7 +25,7 @@ func main() {
 	memoryClockChan := make(chan string)
 	writebackClockChan := make(chan string)
 
-	ifDecChan := make(chan mips.IfDec, 1) // non-blocking channels with buffers size = 1. These act as inter-stage's registers.
+	ifDecChan := make(chan mips.IfDec, 1) // non-blocking channels with buffers size = 1 (async communication). These act as inter-stage's registers.
 	decExcChan := make(chan mips.DecExc, 1)
 	exMemChan := make(chan mips.ExMem, 1)
 	memWBChan := make(chan mips.MemWB, 1)
