@@ -16,7 +16,7 @@ func NewMemory(fileName string) Memory {
 }
 
 func (mem Memory) loadMemoryFromFile(fileName string) {
-	file, err := os.Open("./" + fileName)
+	file, err := os.Open("./memory-initial-state/" + fileName)
 	if err != nil {
 		log.Fatalf("failed to open")
 
