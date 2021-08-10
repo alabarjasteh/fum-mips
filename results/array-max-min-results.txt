@@ -1,0 +1,2045 @@
+2021/07/08 18:44:35 Load memory from: array-max-min.txt
+2021/07/08 18:44:35 
+
+
+Tik...
+2021/07/08 18:44:35 Execute	-> NOP
+2021/07/08 18:44:35 Decode 	-> NOP
+2021/07/08 18:44:35 Writeback	-> NOP
+2021/07/08 18:44:35 Memory	-> NOP
+2021/07/08 18:44:35 Fetch	-> PC: 0, LW R$1 R$0 (100)
+2021/07/08 18:44:35 
+
+Tik...
+2021/07/08 18:44:35 Execute	-> NOP
+2021/07/08 18:44:35 Writeback	-> NOP
+2021/07/08 18:44:35 Decode 	-> LW R$1 R$0 (100)
+2021/07/08 18:44:35 Memory	-> NOP
+2021/07/08 18:44:35 Fetch	-> PC: 4, LW R$2 R$0 (104)
+2021/07/08 18:44:35 
+
+Tik...
+2021/07/08 18:44:35 Memory	-> NOP
+2021/07/08 18:44:35 Writeback	-> NOP
+2021/07/08 18:44:35 Decode 	-> LW R$2 R$0 (104)
+2021/07/08 18:44:35 Fetch	-> PC: 8, LW R$3 R$0 (108)
+2021/07/08 18:44:36 Execute	-> LW R$1 R$0 (100), aluOut: 100
+2021/07/08 18:44:36 
+
+Tik...
+2021/07/08 18:44:36 Decode 	-> LW R$3 R$0 (108)
+2021/07/08 18:44:36 Writeback	-> NOP
+2021/07/08 18:44:36 Memory	-> LW R$1 R$0 (100), load 10 from memory loction(100)
+2021/07/08 18:44:36 Fetch	-> PC: 12, ORI R$4 R$0 (0)
+2021/07/08 18:44:36 Execute	-> LW R$2 R$0 (104), aluOut: 104
+2021/07/08 18:44:36 
+
+Tik...
+2021/07/08 18:44:36 Memory	-> LW R$2 R$0 (104), load -2147483648 from memory loction(104)
+2021/07/08 18:44:36 Writeback	-> LW R$1 R$0 (100),  writes 10 into R$1
+2021/07/08 18:44:36 Decode 	-> ORI R$4 R$0 (0)
+2021/07/08 18:44:36 Fetch	-> PC: 16, LW R$5 R$0 (112)
+2021/07/08 18:44:36 Execute	-> LW R$3 R$0 (108), aluOut: 108
+2021/07/08 18:44:36 
+
+Tik...
+2021/07/08 18:44:36 Writeback	-> LW R$2 R$0 (104),  writes -2147483648 into R$2
+2021/07/08 18:44:36 Decode 	-> LW R$5 R$0 (112)
+2021/07/08 18:44:36 Memory	-> LW R$3 R$0 (108), load 2147483647 from memory loction(108)
+2021/07/08 18:44:36 Fetch	-> PC: 20, BEQ R$1 R$4 (11)
+2021/07/08 18:44:36 Execute	-> ORI R$4 R$0 (0), aluOut: 0
+2021/07/08 18:44:36 
+
+Tik...
+2021/07/08 18:44:36 Decode 	-> BEQ R$1 R$4 (11)
+2021/07/08 18:44:36 Memory	-> ORI R$4 R$0 (0)
+2021/07/08 18:44:36 Writeback	-> LW R$3 R$0 (108),  writes 2147483647 into R$3
+2021/07/08 18:44:36 Fetch	-> Stall
+2021/07/08 18:44:36 Execute	-> LW R$5 R$0 (112), aluOut: 112
+2021/07/08 18:44:36 
+
+Tik...
+2021/07/08 18:44:36 Memory	-> LW R$5 R$0 (112), load 116 from memory loction(112)
+2021/07/08 18:44:36 Execute	-> NOP
+2021/07/08 18:44:36 Decode 	-> BEQ R$1 R$4 (11)
+2021/07/08 18:44:36 Writeback	-> ORI R$4 R$0 (0),  writes 0 into R$4
+2021/07/08 18:44:36 Fetch	-> Stall
+2021/07/08 18:44:37 
+
+Tik...
+2021/07/08 18:44:37 Execute	-> NOP
+2021/07/08 18:44:37 Memory	-> NOP
+2021/07/08 18:44:37 Decode 	-> BEQ R$1 R$4 (11)
+2021/07/08 18:44:37 Writeback	-> LW R$5 R$0 (112),  writes 116 into R$5
+2021/07/08 18:44:37 Fetch	-> Killed <Branch in the pipeline>
+2021/07/08 18:44:37 
+
+Tik...
+2021/07/08 18:44:37 Decode 	-> NOP
+2021/07/08 18:44:37 Writeback	-> NOP
+2021/07/08 18:44:37 Memory	-> NOP
+2021/07/08 18:44:37 Fetch	-> Killed <Branch in the pipeline>
+2021/07/08 18:44:37 Execute	-> BEQ R$1 R$4 (11), aluOut: 0
+2021/07/08 18:44:37 
+
+Tik...
+2021/07/08 18:44:37 Writeback	-> NOP
+2021/07/08 18:44:37 Memory	-> BEQ R$1 R$4 (11), branch is NOT taken
+2021/07/08 18:44:37 Execute	-> NOP
+2021/07/08 18:44:37 Decode 	-> NOP
+2021/07/08 18:44:37 Fetch	-> PC: 24, LW R$6 R$5 (0)
+2021/07/08 18:44:37 
+
+Tik...
+2021/07/08 18:44:37 Memory	-> NOP
+2021/07/08 18:44:37 Writeback	-> BEQ R$1 R$4 (11) ,no write to register file
+2021/07/08 18:44:37 Decode 	-> LW R$6 R$5 (0)
+2021/07/08 18:44:37 Execute	-> NOP
+2021/07/08 18:44:37 Fetch	-> PC: 28, SLT R$7 R$2 R$6
+2021/07/08 18:44:37 
+
+Tik...
+2021/07/08 18:44:37 Writeback	-> NOP
+2021/07/08 18:44:37 Decode 	-> SLT R$7 R$2 R$6
+2021/07/08 18:44:37 Memory	-> NOP
+2021/07/08 18:44:37 Fetch	-> Stall
+2021/07/08 18:44:38 Execute	-> LW R$6 R$5 (0), aluOut: 116
+2021/07/08 18:44:38 
+
+Tik...
+2021/07/08 18:44:38 Memory	-> LW R$6 R$5 (0), load 321 from memory loction(116)
+2021/07/08 18:44:38 Execute	-> NOP
+2021/07/08 18:44:38 Decode 	-> SLT R$7 R$2 R$6
+2021/07/08 18:44:38 Writeback	-> NOP
+2021/07/08 18:44:38 Fetch	-> Stall
+2021/07/08 18:44:38 
+
+Tik...
+2021/07/08 18:44:38 Execute	-> NOP
+2021/07/08 18:44:38 Memory	-> NOP
+2021/07/08 18:44:38 Decode 	-> SLT R$7 R$2 R$6
+2021/07/08 18:44:38 Writeback	-> LW R$6 R$5 (0),  writes 321 into R$6
+2021/07/08 18:44:38 Fetch	-> PC: 32, BEQ R$7 R$0 (1)
+2021/07/08 18:44:38 
+
+Tik...
+2021/07/08 18:44:38 Writeback	-> NOP
+2021/07/08 18:44:38 Memory	-> NOP
+2021/07/08 18:44:38 Decode 	-> BEQ R$7 R$0 (1)
+2021/07/08 18:44:38 Fetch	-> Stall
+2021/07/08 18:44:38 Execute	-> SLT R$7 R$2 R$6, aluOut: 1
+2021/07/08 18:44:38 
+
+Tik...
+2021/07/08 18:44:38 Writeback	-> NOP
+2021/07/08 18:44:38 Execute	-> NOP
+2021/07/08 18:44:38 Decode 	-> BEQ R$7 R$0 (1)
+2021/07/08 18:44:38 Memory	-> SLT R$7 R$2 R$6
+2021/07/08 18:44:38 Fetch	-> Stall
+2021/07/08 18:44:38 
+
+Tik...
+2021/07/08 18:44:38 Writeback	-> SLT R$7 R$2 R$6,  writes 1 into R$7
+2021/07/08 18:44:38 Execute	-> NOP
+2021/07/08 18:44:38 Memory	-> NOP
+2021/07/08 18:44:38 Decode 	-> BEQ R$7 R$0 (1)
+2021/07/08 18:44:38 Fetch	-> Killed <Branch in the pipeline>
+2021/07/08 18:44:39 
+
+Tik...
+2021/07/08 18:44:39 Writeback	-> NOP
+2021/07/08 18:44:39 Decode 	-> NOP
+2021/07/08 18:44:39 Memory	-> NOP
+2021/07/08 18:44:39 Fetch	-> Killed <Branch in the pipeline>
+2021/07/08 18:44:39 Execute	-> BEQ R$7 R$0 (1), aluOut: 0
+2021/07/08 18:44:39 
+
+Tik...
+2021/07/08 18:44:39 Writeback	-> NOP
+2021/07/08 18:44:39 Decode 	-> NOP
+2021/07/08 18:44:39 Execute	-> NOP
+2021/07/08 18:44:39 Memory	-> BEQ R$7 R$0 (1), branch is NOT taken
+2021/07/08 18:44:39 Fetch	-> PC: 36, ADD R$2 R$0 R$6
+2021/07/08 18:44:39 
+
+Tik...
+2021/07/08 18:44:39 Execute	-> NOP
+2021/07/08 18:44:39 Memory	-> NOP
+2021/07/08 18:44:39 Decode 	-> ADD R$2 R$0 R$6
+2021/07/08 18:44:39 Writeback	-> BEQ R$7 R$0 (1) ,no write to register file
+2021/07/08 18:44:39 Fetch	-> PC: 40, SLT R$7 R$6 R$3
+2021/07/08 18:44:39 
+
+Tik...
+2021/07/08 18:44:39 Writeback	-> NOP
+2021/07/08 18:44:39 Memory	-> NOP
+2021/07/08 18:44:39 Decode 	-> SLT R$7 R$6 R$3
+2021/07/08 18:44:39 Fetch	-> PC: 44, BEQ R$7 R$0 (1)
+2021/07/08 18:44:39 Execute	-> ADD R$2 R$0 R$6, aluOut: 321
+2021/07/08 18:44:39 
+
+Tik...
+2021/07/08 18:44:39 Memory	-> ADD R$2 R$0 R$6
+2021/07/08 18:44:39 Writeback	-> NOP
+2021/07/08 18:44:39 Decode 	-> BEQ R$7 R$0 (1)
+2021/07/08 18:44:39 Fetch	-> Stall
+2021/07/08 18:44:40 Execute	-> SLT R$7 R$6 R$3, aluOut: 1
+2021/07/08 18:44:40 
+
+Tik...
+2021/07/08 18:44:40 Writeback	-> ADD R$2 R$0 R$6,  writes 321 into R$2
+2021/07/08 18:44:40 Decode 	-> BEQ R$7 R$0 (1)
+2021/07/08 18:44:40 Execute	-> NOP
+2021/07/08 18:44:40 Memory	-> SLT R$7 R$6 R$3
+2021/07/08 18:44:40 Fetch	-> Stall
+2021/07/08 18:44:40 
+
+Tik...
+2021/07/08 18:44:40 Writeback	-> SLT R$7 R$6 R$3,  writes 1 into R$7
+2021/07/08 18:44:40 Decode 	-> BEQ R$7 R$0 (1)
+2021/07/08 18:44:40 Memory	-> NOP
+2021/07/08 18:44:40 Execute	-> NOP
+2021/07/08 18:44:40 Fetch	-> Killed <Branch in the pipeline>
+2021/07/08 18:44:40 
+
+Tik...
+2021/07/08 18:44:40 Writeback	-> NOP
+2021/07/08 18:44:40 Memory	-> NOP
+2021/07/08 18:44:40 Decode 	-> NOP
+2021/07/08 18:44:40 Fetch	-> Killed <Branch in the pipeline>
+2021/07/08 18:44:40 Execute	-> BEQ R$7 R$0 (1), aluOut: 0
+2021/07/08 18:44:40 
+
+Tik...
+2021/07/08 18:44:40 Execute	-> NOP
+2021/07/08 18:44:40 Decode 	-> NOP
+2021/07/08 18:44:40 Writeback	-> NOP
+2021/07/08 18:44:40 Memory	-> BEQ R$7 R$0 (1), branch is NOT taken
+2021/07/08 18:44:40 Fetch	-> PC: 48, ADD R$3 R$0 R$6
+2021/07/08 18:44:40 
+
+Tik...
+2021/07/08 18:44:40 Writeback	-> BEQ R$7 R$0 (1) ,no write to register file
+2021/07/08 18:44:40 Execute	-> NOP
+2021/07/08 18:44:40 Memory	-> NOP
+2021/07/08 18:44:40 Decode 	-> ADD R$3 R$0 R$6
+2021/07/08 18:44:40 Fetch	-> PC: 52, ADDI R$4 R$4 (1)
+2021/07/08 18:44:41 
+
+Tik...
+2021/07/08 18:44:41 Memory	-> NOP
+2021/07/08 18:44:41 Writeback	-> NOP
+2021/07/08 18:44:41 Decode 	-> ADDI R$4 R$4 (1)
+2021/07/08 18:44:41 Fetch	-> PC: 56, ADDI R$5 R$5 (4)
+2021/07/08 18:44:41 Execute	-> ADD R$3 R$0 R$6, aluOut: 321
+2021/07/08 18:44:41 
+
+Tik...
+2021/07/08 18:44:41 Memory	-> ADD R$3 R$0 R$6
+2021/07/08 18:44:41 Decode 	-> ADDI R$5 R$5 (4)
+2021/07/08 18:44:41 Writeback	-> NOP
+2021/07/08 18:44:41 Fetch	-> PC: 60, J 5
+2021/07/08 18:44:41 [*Fetch*] -> jump to PC: 20
+2021/07/08 18:44:41 Execute	-> ADDI R$4 R$4 (1), aluOut: 1
+2021/07/08 18:44:41 
+
+Tik...
+2021/07/08 18:44:41 Writeback	-> ADD R$3 R$0 R$6,  writes 321 into R$3
+2021/07/08 18:44:41 Memory	-> ADDI R$4 R$4 (1)
+2021/07/08 18:44:41 Decode 	-> NOP
+2021/07/08 18:44:41 Fetch	-> PC: 20, BEQ R$1 R$4 (11)
+2021/07/08 18:44:41 Execute	-> ADDI R$5 R$5 (4), aluOut: 120
+2021/07/08 18:44:41 
+
+Tik...
+2021/07/08 18:44:41 Execute	-> NOP
+2021/07/08 18:44:41 Memory	-> ADDI R$5 R$5 (4)
+2021/07/08 18:44:41 Writeback	-> ADDI R$4 R$4 (1),  writes 1 into R$4
+2021/07/08 18:44:41 Decode 	-> BEQ R$1 R$4 (11)
+2021/07/08 18:44:41 Fetch	-> Killed <Branch in the pipeline>
+2021/07/08 18:44:41 
+
+Tik...
+2021/07/08 18:44:41 Decode 	-> NOP
+2021/07/08 18:44:41 Memory	-> NOP
+2021/07/08 18:44:41 Writeback	-> ADDI R$5 R$5 (4),  writes 120 into R$5
+2021/07/08 18:44:41 Fetch	-> Killed <Branch in the pipeline>
+2021/07/08 18:44:42 Execute	-> BEQ R$1 R$4 (11), aluOut: 0
+2021/07/08 18:44:42 
+
+Tik...
+2021/07/08 18:44:42 Execute	-> NOP
+2021/07/08 18:44:42 Decode 	-> NOP
+2021/07/08 18:44:42 Memory	-> BEQ R$1 R$4 (11), branch is NOT taken
+2021/07/08 18:44:42 Writeback	-> NOP
+2021/07/08 18:44:42 Fetch	-> PC: 24, LW R$6 R$5 (0)
+2021/07/08 18:44:42 
+
+Tik...
+2021/07/08 18:44:42 Execute	-> NOP
+2021/07/08 18:44:42 Writeback	-> BEQ R$1 R$4 (11) ,no write to register file
+2021/07/08 18:44:42 Memory	-> NOP
+2021/07/08 18:44:42 Decode 	-> LW R$6 R$5 (0)
+2021/07/08 18:44:42 Fetch	-> PC: 28, SLT R$7 R$2 R$6
+2021/07/08 18:44:42 
+
+Tik...
+2021/07/08 18:44:42 Writeback	-> NOP
+2021/07/08 18:44:42 Decode 	-> SLT R$7 R$2 R$6
+2021/07/08 18:44:42 Memory	-> NOP
+2021/07/08 18:44:42 Fetch	-> Stall
+2021/07/08 18:44:42 Execute	-> LW R$6 R$5 (0), aluOut: 120
+2021/07/08 18:44:42 
+
+Tik...
+2021/07/08 18:44:42 Execute	-> NOP
+2021/07/08 18:44:42 Decode 	-> SLT R$7 R$2 R$6
+2021/07/08 18:44:42 Writeback	-> NOP
+2021/07/08 18:44:42 Memory	-> LW R$6 R$5 (0), load -12 from memory loction(120)
+2021/07/08 18:44:42 Fetch	-> Stall
+2021/07/08 18:44:42 
+
+Tik...
+2021/07/08 18:44:42 Writeback	-> LW R$6 R$5 (0),  writes -12 into R$6
+2021/07/08 18:44:42 Memory	-> NOP
+2021/07/08 18:44:42 Decode 	-> SLT R$7 R$2 R$6
+2021/07/08 18:44:42 Execute	-> NOP
+2021/07/08 18:44:42 Fetch	-> PC: 32, BEQ R$7 R$0 (1)
+2021/07/08 18:44:43 
+
+Tik...
+2021/07/08 18:44:43 Writeback	-> NOP
+2021/07/08 18:44:43 Memory	-> NOP
+2021/07/08 18:44:43 Decode 	-> BEQ R$7 R$0 (1)
+2021/07/08 18:44:43 Fetch	-> Stall
+2021/07/08 18:44:43 Execute	-> SLT R$7 R$2 R$6, aluOut: 0
+2021/07/08 18:44:43 
+
+Tik...
+2021/07/08 18:44:43 Writeback	-> NOP
+2021/07/08 18:44:43 Memory	-> SLT R$7 R$2 R$6
+2021/07/08 18:44:43 Decode 	-> BEQ R$7 R$0 (1)
+2021/07/08 18:44:43 Execute	-> NOP
+2021/07/08 18:44:43 Fetch	-> Stall
+2021/07/08 18:44:43 
+
+Tik...
+2021/07/08 18:44:43 Writeback	-> SLT R$7 R$2 R$6,  writes 0 into R$7
+2021/07/08 18:44:43 Decode 	-> BEQ R$7 R$0 (1)
+2021/07/08 18:44:43 Memory	-> NOP
+2021/07/08 18:44:43 Execute	-> NOP
+2021/07/08 18:44:43 Fetch	-> Killed <Branch in the pipeline>
+2021/07/08 18:44:43 
+
+Tik...
+2021/07/08 18:44:43 Memory	-> NOP
+2021/07/08 18:44:43 Decode 	-> NOP
+2021/07/08 18:44:43 Writeback	-> NOP
+2021/07/08 18:44:43 Fetch	-> Killed <Branch in the pipeline>
+2021/07/08 18:44:43 Execute	-> BEQ R$7 R$0 (1), aluOut: 1
+2021/07/08 18:44:43 
+
+Tik...
+2021/07/08 18:44:43 Execute	-> NOP
+2021/07/08 18:44:43 Writeback	-> NOP
+2021/07/08 18:44:43 Decode 	-> NOP
+2021/07/08 18:44:43 Fetch	-> Killed <Branch in the pipeline>
+2021/07/08 18:44:44 Memory	-> BEQ R$7 R$0 (1), branch is taken
+2021/07/08 18:44:44 
+
+Tik...
+2021/07/08 18:44:44 Writeback	-> NOP
+2021/07/08 18:44:44 Memory	-> NOP
+2021/07/08 18:44:44 Decode 	-> NOP
+2021/07/08 18:44:44 Execute	-> NOP
+2021/07/08 18:44:44 Fetch	-> PC: 40, SLT R$7 R$6 R$3
+2021/07/08 18:44:44 
+
+Tik...
+2021/07/08 18:44:44 Execute	-> NOP
+2021/07/08 18:44:44 Memory	-> NOP
+2021/07/08 18:44:44 Writeback	-> BEQ R$7 R$0 (1) ,no write to register file
+2021/07/08 18:44:44 Decode 	-> SLT R$7 R$6 R$3
+2021/07/08 18:44:44 Fetch	-> PC: 44, BEQ R$7 R$0 (1)
+2021/07/08 18:44:44 
+
+Tik...
+2021/07/08 18:44:44 Memory	-> NOP
+2021/07/08 18:44:44 Decode 	-> BEQ R$7 R$0 (1)
+2021/07/08 18:44:44 Writeback	-> NOP
+2021/07/08 18:44:44 Fetch	-> Stall
+2021/07/08 18:44:44 Execute	-> SLT R$7 R$6 R$3, aluOut: 1
+2021/07/08 18:44:44 
+
+Tik...
+2021/07/08 18:44:44 Execute	-> NOP
+2021/07/08 18:44:44 Decode 	-> BEQ R$7 R$0 (1)
+2021/07/08 18:44:44 Writeback	-> NOP
+2021/07/08 18:44:44 Memory	-> SLT R$7 R$6 R$3
+2021/07/08 18:44:44 Fetch	-> Stall
+2021/07/08 18:44:44 
+
+Tik...
+2021/07/08 18:44:44 Execute	-> NOP
+2021/07/08 18:44:44 Memory	-> NOP
+2021/07/08 18:44:44 Decode 	-> BEQ R$7 R$0 (1)
+2021/07/08 18:44:44 Writeback	-> SLT R$7 R$6 R$3,  writes 1 into R$7
+2021/07/08 18:44:44 Fetch	-> Killed <Branch in the pipeline>
+2021/07/08 18:44:45 
+
+Tik...
+2021/07/08 18:44:45 Writeback	-> NOP
+2021/07/08 18:44:45 Memory	-> NOP
+2021/07/08 18:44:45 Decode 	-> NOP
+2021/07/08 18:44:45 Fetch	-> Killed <Branch in the pipeline>
+2021/07/08 18:44:45 Execute	-> BEQ R$7 R$0 (1), aluOut: 0
+2021/07/08 18:44:45 
+
+Tik...
+2021/07/08 18:44:45 Writeback	-> NOP
+2021/07/08 18:44:45 Decode 	-> NOP
+2021/07/08 18:44:45 Execute	-> NOP
+2021/07/08 18:44:45 Memory	-> BEQ R$7 R$0 (1), branch is NOT taken
+2021/07/08 18:44:45 Fetch	-> PC: 48, ADD R$3 R$0 R$6
+2021/07/08 18:44:45 
+
+Tik...
+2021/07/08 18:44:45 Execute	-> NOP
+2021/07/08 18:44:45 Writeback	-> BEQ R$7 R$0 (1) ,no write to register file
+2021/07/08 18:44:45 Decode 	-> ADD R$3 R$0 R$6
+2021/07/08 18:44:45 Memory	-> NOP
+2021/07/08 18:44:45 Fetch	-> PC: 52, ADDI R$4 R$4 (1)
+2021/07/08 18:44:45 
+
+Tik...
+2021/07/08 18:44:45 Memory	-> NOP
+2021/07/08 18:44:45 Decode 	-> ADDI R$4 R$4 (1)
+2021/07/08 18:44:45 Writeback	-> NOP
+2021/07/08 18:44:45 Fetch	-> PC: 56, ADDI R$5 R$5 (4)
+2021/07/08 18:44:45 Execute	-> ADD R$3 R$0 R$6, aluOut: -12
+2021/07/08 18:44:45 
+
+Tik...
+2021/07/08 18:44:45 Decode 	-> ADDI R$5 R$5 (4)
+2021/07/08 18:44:45 Memory	-> ADD R$3 R$0 R$6
+2021/07/08 18:44:45 Writeback	-> NOP
+2021/07/08 18:44:45 Fetch	-> PC: 60, J 5
+2021/07/08 18:44:45 [*Fetch*] -> jump to PC: 20
+2021/07/08 18:44:46 Execute	-> ADDI R$4 R$4 (1), aluOut: 2
+2021/07/08 18:44:46 
+
+Tik...
+2021/07/08 18:44:46 Writeback	-> ADD R$3 R$0 R$6,  writes -12 into R$3
+2021/07/08 18:44:46 Decode 	-> NOP
+2021/07/08 18:44:46 Memory	-> ADDI R$4 R$4 (1)
+2021/07/08 18:44:46 Fetch	-> PC: 20, BEQ R$1 R$4 (11)
+2021/07/08 18:44:46 Execute	-> ADDI R$5 R$5 (4), aluOut: 124
+2021/07/08 18:44:46 
+
+Tik...
+2021/07/08 18:44:46 Execute	-> NOP
+2021/07/08 18:44:46 Memory	-> ADDI R$5 R$5 (4)
+2021/07/08 18:44:46 Decode 	-> BEQ R$1 R$4 (11)
+2021/07/08 18:44:46 Writeback	-> ADDI R$4 R$4 (1),  writes 2 into R$4
+2021/07/08 18:44:46 Fetch	-> Killed <Branch in the pipeline>
+2021/07/08 18:44:46 
+
+Tik...
+2021/07/08 18:44:46 Writeback	-> ADDI R$5 R$5 (4),  writes 124 into R$5
+2021/07/08 18:44:46 Decode 	-> NOP
+2021/07/08 18:44:46 Memory	-> NOP
+2021/07/08 18:44:46 Fetch	-> Killed <Branch in the pipeline>
+2021/07/08 18:44:46 Execute	-> BEQ R$1 R$4 (11), aluOut: 0
+2021/07/08 18:44:46 
+
+Tik...
+2021/07/08 18:44:46 Execute	-> NOP
+2021/07/08 18:44:46 Decode 	-> NOP
+2021/07/08 18:44:46 Writeback	-> NOP
+2021/07/08 18:44:46 Memory	-> BEQ R$1 R$4 (11), branch is NOT taken
+2021/07/08 18:44:46 Fetch	-> PC: 24, LW R$6 R$5 (0)
+2021/07/08 18:44:46 
+
+Tik...
+2021/07/08 18:44:46 Writeback	-> BEQ R$1 R$4 (11) ,no write to register file
+2021/07/08 18:44:46 Decode 	-> LW R$6 R$5 (0)
+2021/07/08 18:44:46 Execute	-> NOP
+2021/07/08 18:44:46 Memory	-> NOP
+2021/07/08 18:44:46 Fetch	-> PC: 28, SLT R$7 R$2 R$6
+2021/07/08 18:44:47 
+
+Tik...
+2021/07/08 18:44:47 Memory	-> NOP
+2021/07/08 18:44:47 Writeback	-> NOP
+2021/07/08 18:44:47 Decode 	-> SLT R$7 R$2 R$6
+2021/07/08 18:44:47 Fetch	-> Stall
+2021/07/08 18:44:47 Execute	-> LW R$6 R$5 (0), aluOut: 124
+2021/07/08 18:44:47 
+
+Tik...
+2021/07/08 18:44:47 Execute	-> NOP
+2021/07/08 18:44:47 Memory	-> LW R$6 R$5 (0), load 134 from memory loction(124)
+2021/07/08 18:44:47 Decode 	-> SLT R$7 R$2 R$6
+2021/07/08 18:44:47 Writeback	-> NOP
+2021/07/08 18:44:47 Fetch	-> Stall
+2021/07/08 18:44:47 
+
+Tik...
+2021/07/08 18:44:47 Execute	-> NOP
+2021/07/08 18:44:47 Decode 	-> SLT R$7 R$2 R$6
+2021/07/08 18:44:47 Writeback	-> LW R$6 R$5 (0),  writes 134 into R$6
+2021/07/08 18:44:47 Memory	-> NOP
+2021/07/08 18:44:47 Fetch	-> PC: 32, BEQ R$7 R$0 (1)
+2021/07/08 18:44:47 
+
+Tik...
+2021/07/08 18:44:47 Writeback	-> NOP
+2021/07/08 18:44:47 Decode 	-> BEQ R$7 R$0 (1)
+2021/07/08 18:44:47 Memory	-> NOP
+2021/07/08 18:44:47 Fetch	-> Stall
+2021/07/08 18:44:47 Execute	-> SLT R$7 R$2 R$6, aluOut: 0
+2021/07/08 18:44:47 
+
+Tik...
+2021/07/08 18:44:47 Execute	-> NOP
+2021/07/08 18:44:47 Memory	-> SLT R$7 R$2 R$6
+2021/07/08 18:44:47 Decode 	-> BEQ R$7 R$0 (1)
+2021/07/08 18:44:47 Writeback	-> NOP
+2021/07/08 18:44:47 Fetch	-> Stall
+2021/07/08 18:44:48 
+
+Tik...
+2021/07/08 18:44:48 Execute	-> NOP
+2021/07/08 18:44:48 Memory	-> NOP
+2021/07/08 18:44:48 Writeback	-> SLT R$7 R$2 R$6,  writes 0 into R$7
+2021/07/08 18:44:48 Decode 	-> BEQ R$7 R$0 (1)
+2021/07/08 18:44:48 Fetch	-> Killed <Branch in the pipeline>
+2021/07/08 18:44:48 
+
+Tik...
+2021/07/08 18:44:48 Decode 	-> NOP
+2021/07/08 18:44:48 Writeback	-> NOP
+2021/07/08 18:44:48 Memory	-> NOP
+2021/07/08 18:44:48 Fetch	-> Killed <Branch in the pipeline>
+2021/07/08 18:44:48 Execute	-> BEQ R$7 R$0 (1), aluOut: 1
+2021/07/08 18:44:48 
+
+Tik...
+2021/07/08 18:44:48 Execute	-> NOP
+2021/07/08 18:44:48 Decode 	-> NOP
+2021/07/08 18:44:48 Writeback	-> NOP
+2021/07/08 18:44:48 Fetch	-> Killed <Branch in the pipeline>
+2021/07/08 18:44:48 Memory	-> BEQ R$7 R$0 (1), branch is taken
+2021/07/08 18:44:48 
+
+Tik...
+2021/07/08 18:44:48 Writeback	-> NOP
+2021/07/08 18:44:48 Memory	-> NOP
+2021/07/08 18:44:48 Execute	-> NOP
+2021/07/08 18:44:48 Decode 	-> NOP
+2021/07/08 18:44:48 Fetch	-> PC: 40, SLT R$7 R$6 R$3
+2021/07/08 18:44:48 
+
+Tik...
+2021/07/08 18:44:48 Execute	-> NOP
+2021/07/08 18:44:48 Memory	-> NOP
+2021/07/08 18:44:48 Writeback	-> BEQ R$7 R$0 (1) ,no write to register file
+2021/07/08 18:44:48 Decode 	-> SLT R$7 R$6 R$3
+2021/07/08 18:44:48 Fetch	-> PC: 44, BEQ R$7 R$0 (1)
+2021/07/08 18:44:49 
+
+Tik...
+2021/07/08 18:44:49 Writeback	-> NOP
+2021/07/08 18:44:49 Memory	-> NOP
+2021/07/08 18:44:49 Decode 	-> BEQ R$7 R$0 (1)
+2021/07/08 18:44:49 Fetch	-> Stall
+2021/07/08 18:44:49 Execute	-> SLT R$7 R$6 R$3, aluOut: 0
+2021/07/08 18:44:49 
+
+Tik...
+2021/07/08 18:44:49 Writeback	-> NOP
+2021/07/08 18:44:49 Execute	-> NOP
+2021/07/08 18:44:49 Memory	-> SLT R$7 R$6 R$3
+2021/07/08 18:44:49 Decode 	-> BEQ R$7 R$0 (1)
+2021/07/08 18:44:49 Fetch	-> Stall
+2021/07/08 18:44:49 
+
+Tik...
+2021/07/08 18:44:49 Writeback	-> SLT R$7 R$6 R$3,  writes 0 into R$7
+2021/07/08 18:44:49 Execute	-> NOP
+2021/07/08 18:44:49 Memory	-> NOP
+2021/07/08 18:44:49 Decode 	-> BEQ R$7 R$0 (1)
+2021/07/08 18:44:49 Fetch	-> Killed <Branch in the pipeline>
+2021/07/08 18:44:49 
+
+Tik...
+2021/07/08 18:44:49 Writeback	-> NOP
+2021/07/08 18:44:49 Decode 	-> NOP
+2021/07/08 18:44:49 Memory	-> NOP
+2021/07/08 18:44:49 Fetch	-> Killed <Branch in the pipeline>
+2021/07/08 18:44:49 Execute	-> BEQ R$7 R$0 (1), aluOut: 1
+2021/07/08 18:44:49 
+
+Tik...
+2021/07/08 18:44:49 Writeback	-> NOP
+2021/07/08 18:44:49 Execute	-> NOP
+2021/07/08 18:44:49 Decode 	-> NOP
+2021/07/08 18:44:49 Fetch	-> Killed <Branch in the pipeline>
+2021/07/08 18:44:50 Memory	-> BEQ R$7 R$0 (1), branch is taken
+2021/07/08 18:44:50 
+
+Tik...
+2021/07/08 18:44:50 Writeback	-> NOP
+2021/07/08 18:44:50 Memory	-> NOP
+2021/07/08 18:44:50 Execute	-> NOP
+2021/07/08 18:44:50 Decode 	-> NOP
+2021/07/08 18:44:50 Fetch	-> PC: 52, ADDI R$4 R$4 (1)
+2021/07/08 18:44:50 
+
+Tik...
+2021/07/08 18:44:50 Writeback	-> BEQ R$7 R$0 (1) ,no write to register file
+2021/07/08 18:44:50 Memory	-> NOP
+2021/07/08 18:44:50 Decode 	-> ADDI R$4 R$4 (1)
+2021/07/08 18:44:50 Execute	-> NOP
+2021/07/08 18:44:50 Fetch	-> PC: 56, ADDI R$5 R$5 (4)
+2021/07/08 18:44:50 
+
+Tik...
+2021/07/08 18:44:50 Writeback	-> NOP
+2021/07/08 18:44:50 Memory	-> NOP
+2021/07/08 18:44:50 Decode 	-> ADDI R$5 R$5 (4)
+2021/07/08 18:44:50 Fetch	-> PC: 60, J 5
+2021/07/08 18:44:50 [*Fetch*] -> jump to PC: 20
+2021/07/08 18:44:50 Execute	-> ADDI R$4 R$4 (1), aluOut: 3
+2021/07/08 18:44:50 
+
+Tik...
+2021/07/08 18:44:50 Memory	-> ADDI R$4 R$4 (1)
+2021/07/08 18:44:50 Decode 	-> NOP
+2021/07/08 18:44:50 Writeback	-> NOP
+2021/07/08 18:44:50 Fetch	-> PC: 20, BEQ R$1 R$4 (11)
+2021/07/08 18:44:50 Execute	-> ADDI R$5 R$5 (4), aluOut: 128
+2021/07/08 18:44:50 
+
+Tik...
+2021/07/08 18:44:50 Writeback	-> ADDI R$4 R$4 (1),  writes 3 into R$4
+2021/07/08 18:44:50 Execute	-> NOP
+2021/07/08 18:44:50 Decode 	-> BEQ R$1 R$4 (11)
+2021/07/08 18:44:50 Memory	-> ADDI R$5 R$5 (4)
+2021/07/08 18:44:50 Fetch	-> Killed <Branch in the pipeline>
+2021/07/08 18:44:51 
+
+Tik...
+2021/07/08 18:44:51 Writeback	-> ADDI R$5 R$5 (4),  writes 128 into R$5
+2021/07/08 18:44:51 Decode 	-> NOP
+2021/07/08 18:44:51 Memory	-> NOP
+2021/07/08 18:44:51 Fetch	-> Killed <Branch in the pipeline>
+2021/07/08 18:44:51 Execute	-> BEQ R$1 R$4 (11), aluOut: 0
+2021/07/08 18:44:51 
+
+Tik...
+2021/07/08 18:44:51 Writeback	-> NOP
+2021/07/08 18:44:51 Execute	-> NOP
+2021/07/08 18:44:51 Memory	-> BEQ R$1 R$4 (11), branch is NOT taken
+2021/07/08 18:44:51 Decode 	-> NOP
+2021/07/08 18:44:51 Fetch	-> PC: 24, LW R$6 R$5 (0)
+2021/07/08 18:44:51 
+
+Tik...
+2021/07/08 18:44:51 Memory	-> NOP
+2021/07/08 18:44:51 Decode 	-> LW R$6 R$5 (0)
+2021/07/08 18:44:51 Execute	-> NOP
+2021/07/08 18:44:51 Writeback	-> BEQ R$1 R$4 (11) ,no write to register file
+2021/07/08 18:44:51 Fetch	-> PC: 28, SLT R$7 R$2 R$6
+2021/07/08 18:44:51 
+
+Tik...
+2021/07/08 18:44:51 Memory	-> NOP
+2021/07/08 18:44:51 Decode 	-> SLT R$7 R$2 R$6
+2021/07/08 18:44:51 Writeback	-> NOP
+2021/07/08 18:44:51 Fetch	-> Stall
+2021/07/08 18:44:51 Execute	-> LW R$6 R$5 (0), aluOut: 128
+2021/07/08 18:44:51 
+
+Tik...
+2021/07/08 18:44:51 Execute	-> NOP
+2021/07/08 18:44:51 Memory	-> LW R$6 R$5 (0), load 0 from memory loction(128)
+2021/07/08 18:44:51 Writeback	-> NOP
+2021/07/08 18:44:51 Decode 	-> SLT R$7 R$2 R$6
+2021/07/08 18:44:51 Fetch	-> Stall
+2021/07/08 18:44:52 
+
+Tik...
+2021/07/08 18:44:52 Writeback	-> LW R$6 R$5 (0),  writes 0 into R$6
+2021/07/08 18:44:52 Decode 	-> SLT R$7 R$2 R$6
+2021/07/08 18:44:52 Memory	-> NOP
+2021/07/08 18:44:52 Execute	-> NOP
+2021/07/08 18:44:52 Fetch	-> PC: 32, BEQ R$7 R$0 (1)
+2021/07/08 18:44:52 
+
+Tik...
+2021/07/08 18:44:52 Memory	-> NOP
+2021/07/08 18:44:52 Decode 	-> BEQ R$7 R$0 (1)
+2021/07/08 18:44:52 Writeback	-> NOP
+2021/07/08 18:44:52 Fetch	-> Stall
+2021/07/08 18:44:52 Execute	-> SLT R$7 R$2 R$6, aluOut: 0
+2021/07/08 18:44:52 
+
+Tik...
+2021/07/08 18:44:52 Execute	-> NOP
+2021/07/08 18:44:52 Decode 	-> BEQ R$7 R$0 (1)
+2021/07/08 18:44:52 Writeback	-> NOP
+2021/07/08 18:44:52 Memory	-> SLT R$7 R$2 R$6
+2021/07/08 18:44:52 Fetch	-> Stall
+2021/07/08 18:44:52 
+
+Tik...
+2021/07/08 18:44:52 Writeback	-> SLT R$7 R$2 R$6,  writes 0 into R$7
+2021/07/08 18:44:52 Decode 	-> BEQ R$7 R$0 (1)
+2021/07/08 18:44:52 Execute	-> NOP
+2021/07/08 18:44:52 Memory	-> NOP
+2021/07/08 18:44:52 Fetch	-> Killed <Branch in the pipeline>
+2021/07/08 18:44:52 
+
+Tik...
+2021/07/08 18:44:52 Writeback	-> NOP
+2021/07/08 18:44:52 Memory	-> NOP
+2021/07/08 18:44:52 Decode 	-> NOP
+2021/07/08 18:44:52 Fetch	-> Killed <Branch in the pipeline>
+2021/07/08 18:44:53 Execute	-> BEQ R$7 R$0 (1), aluOut: 1
+2021/07/08 18:44:53 
+
+Tik...
+2021/07/08 18:44:53 Writeback	-> NOP
+2021/07/08 18:44:53 Execute	-> NOP
+2021/07/08 18:44:53 Decode 	-> NOP
+2021/07/08 18:44:53 Fetch	-> Killed <Branch in the pipeline>
+2021/07/08 18:44:53 Memory	-> BEQ R$7 R$0 (1), branch is taken
+2021/07/08 18:44:53 
+
+Tik...
+2021/07/08 18:44:53 Writeback	-> NOP
+2021/07/08 18:44:53 Memory	-> NOP
+2021/07/08 18:44:53 Decode 	-> NOP
+2021/07/08 18:44:53 Execute	-> NOP
+2021/07/08 18:44:53 Fetch	-> PC: 40, SLT R$7 R$6 R$3
+2021/07/08 18:44:53 
+
+Tik...
+2021/07/08 18:44:53 Execute	-> NOP
+2021/07/08 18:44:53 Writeback	-> BEQ R$7 R$0 (1) ,no write to register file
+2021/07/08 18:44:53 Memory	-> NOP
+2021/07/08 18:44:53 Decode 	-> SLT R$7 R$6 R$3
+2021/07/08 18:44:53 Fetch	-> PC: 44, BEQ R$7 R$0 (1)
+2021/07/08 18:44:53 
+
+Tik...
+2021/07/08 18:44:53 Writeback	-> NOP
+2021/07/08 18:44:53 Decode 	-> BEQ R$7 R$0 (1)
+2021/07/08 18:44:53 Memory	-> NOP
+2021/07/08 18:44:53 Fetch	-> Stall
+2021/07/08 18:44:53 Execute	-> SLT R$7 R$6 R$3, aluOut: 0
+2021/07/08 18:44:53 
+
+Tik...
+2021/07/08 18:44:53 Execute	-> NOP
+2021/07/08 18:44:53 Memory	-> SLT R$7 R$6 R$3
+2021/07/08 18:44:53 Decode 	-> BEQ R$7 R$0 (1)
+2021/07/08 18:44:53 Writeback	-> NOP
+2021/07/08 18:44:53 Fetch	-> Stall
+2021/07/08 18:44:54 
+
+Tik...
+2021/07/08 18:44:54 Execute	-> NOP
+2021/07/08 18:44:54 Memory	-> NOP
+2021/07/08 18:44:54 Decode 	-> BEQ R$7 R$0 (1)
+2021/07/08 18:44:54 Writeback	-> SLT R$7 R$6 R$3,  writes 0 into R$7
+2021/07/08 18:44:54 Fetch	-> Killed <Branch in the pipeline>
+2021/07/08 18:44:54 
+
+Tik...
+2021/07/08 18:44:54 Writeback	-> NOP
+2021/07/08 18:44:54 Memory	-> NOP
+2021/07/08 18:44:54 Decode 	-> NOP
+2021/07/08 18:44:54 Fetch	-> Killed <Branch in the pipeline>
+2021/07/08 18:44:54 Execute	-> BEQ R$7 R$0 (1), aluOut: 1
+2021/07/08 18:44:54 
+
+Tik...
+2021/07/08 18:44:54 Execute	-> NOP
+2021/07/08 18:44:54 Decode 	-> NOP
+2021/07/08 18:44:54 Writeback	-> NOP
+2021/07/08 18:44:54 Fetch	-> Killed <Branch in the pipeline>
+2021/07/08 18:44:54 Memory	-> BEQ R$7 R$0 (1), branch is taken
+2021/07/08 18:44:54 
+
+Tik...
+2021/07/08 18:44:54 Writeback	-> NOP
+2021/07/08 18:44:54 Memory	-> NOP
+2021/07/08 18:44:54 Decode 	-> NOP
+2021/07/08 18:44:54 Execute	-> NOP
+2021/07/08 18:44:54 Fetch	-> PC: 52, ADDI R$4 R$4 (1)
+2021/07/08 18:44:54 
+
+Tik...
+2021/07/08 18:44:54 Memory	-> NOP
+2021/07/08 18:44:54 Execute	-> NOP
+2021/07/08 18:44:54 Writeback	-> BEQ R$7 R$0 (1) ,no write to register file
+2021/07/08 18:44:54 Decode 	-> ADDI R$4 R$4 (1)
+2021/07/08 18:44:54 Fetch	-> PC: 56, ADDI R$5 R$5 (4)
+2021/07/08 18:44:55 
+
+Tik...
+2021/07/08 18:44:55 Writeback	-> NOP
+2021/07/08 18:44:55 Decode 	-> ADDI R$5 R$5 (4)
+2021/07/08 18:44:55 Memory	-> NOP
+2021/07/08 18:44:55 Fetch	-> PC: 60, J 5
+2021/07/08 18:44:55 [*Fetch*] -> jump to PC: 20
+2021/07/08 18:44:55 Execute	-> ADDI R$4 R$4 (1), aluOut: 4
+2021/07/08 18:44:55 
+
+Tik...
+2021/07/08 18:44:55 Decode 	-> NOP
+2021/07/08 18:44:55 Memory	-> ADDI R$4 R$4 (1)
+2021/07/08 18:44:55 Writeback	-> NOP
+2021/07/08 18:44:55 Fetch	-> PC: 20, BEQ R$1 R$4 (11)
+2021/07/08 18:44:55 Execute	-> ADDI R$5 R$5 (4), aluOut: 132
+2021/07/08 18:44:55 
+
+Tik...
+2021/07/08 18:44:55 Execute	-> NOP
+2021/07/08 18:44:55 Decode 	-> BEQ R$1 R$4 (11)
+2021/07/08 18:44:55 Writeback	-> ADDI R$4 R$4 (1),  writes 4 into R$4
+2021/07/08 18:44:55 Memory	-> ADDI R$5 R$5 (4)
+2021/07/08 18:44:55 Fetch	-> Stall
+2021/07/08 18:44:55 
+
+Tik...
+2021/07/08 18:44:55 Memory	-> NOP
+2021/07/08 18:44:55 Execute	-> NOP
+2021/07/08 18:44:55 Decode 	-> BEQ R$1 R$4 (11)
+2021/07/08 18:44:55 Writeback	-> ADDI R$5 R$5 (4),  writes 132 into R$5
+2021/07/08 18:44:55 Fetch	-> Killed <Branch in the pipeline>
+2021/07/08 18:44:55 
+
+Tik...
+2021/07/08 18:44:55 Memory	-> NOP
+2021/07/08 18:44:55 Decode 	-> NOP
+2021/07/08 18:44:55 Writeback	-> NOP
+2021/07/08 18:44:55 Fetch	-> Killed <Branch in the pipeline>
+2021/07/08 18:44:56 Execute	-> BEQ R$1 R$4 (11), aluOut: 0
+2021/07/08 18:44:56 
+
+Tik...
+2021/07/08 18:44:56 Execute	-> NOP
+2021/07/08 18:44:56 Decode 	-> NOP
+2021/07/08 18:44:56 Memory	-> BEQ R$1 R$4 (11), branch is NOT taken
+2021/07/08 18:44:56 Writeback	-> NOP
+2021/07/08 18:44:56 Fetch	-> PC: 24, LW R$6 R$5 (0)
+2021/07/08 18:44:56 
+
+Tik...
+2021/07/08 18:44:56 Writeback	-> BEQ R$1 R$4 (11) ,no write to register file
+2021/07/08 18:44:56 Decode 	-> LW R$6 R$5 (0)
+2021/07/08 18:44:56 Execute	-> NOP
+2021/07/08 18:44:56 Memory	-> NOP
+2021/07/08 18:44:56 Fetch	-> PC: 28, SLT R$7 R$2 R$6
+2021/07/08 18:44:56 
+
+Tik...
+2021/07/08 18:44:56 Memory	-> NOP
+2021/07/08 18:44:56 Writeback	-> NOP
+2021/07/08 18:44:56 Decode 	-> SLT R$7 R$2 R$6
+2021/07/08 18:44:56 Fetch	-> Stall
+2021/07/08 18:44:56 Execute	-> LW R$6 R$5 (0), aluOut: 132
+2021/07/08 18:44:56 
+
+Tik...
+2021/07/08 18:44:56 Writeback	-> NOP
+2021/07/08 18:44:56 Execute	-> NOP
+2021/07/08 18:44:56 Memory	-> LW R$6 R$5 (0), load -2625421 from memory loction(132)
+2021/07/08 18:44:56 Decode 	-> SLT R$7 R$2 R$6
+2021/07/08 18:44:56 Fetch	-> Stall
+2021/07/08 18:44:56 
+
+Tik...
+2021/07/08 18:44:56 Writeback	-> LW R$6 R$5 (0),  writes -2625421 into R$6
+2021/07/08 18:44:56 Execute	-> NOP
+2021/07/08 18:44:56 Memory	-> NOP
+2021/07/08 18:44:56 Decode 	-> SLT R$7 R$2 R$6
+2021/07/08 18:44:56 Fetch	-> PC: 32, BEQ R$7 R$0 (1)
+2021/07/08 18:44:57 
+
+Tik...
+2021/07/08 18:44:57 Memory	-> NOP
+2021/07/08 18:44:57 Writeback	-> NOP
+2021/07/08 18:44:57 Decode 	-> BEQ R$7 R$0 (1)
+2021/07/08 18:44:57 Fetch	-> Stall
+2021/07/08 18:44:57 Execute	-> SLT R$7 R$2 R$6, aluOut: 0
+2021/07/08 18:44:57 
+
+Tik...
+2021/07/08 18:44:57 Execute	-> NOP
+2021/07/08 18:44:57 Decode 	-> BEQ R$7 R$0 (1)
+2021/07/08 18:44:57 Writeback	-> NOP
+2021/07/08 18:44:57 Memory	-> SLT R$7 R$2 R$6
+2021/07/08 18:44:57 Fetch	-> Stall
+2021/07/08 18:44:57 
+
+Tik...
+2021/07/08 18:44:57 Execute	-> NOP
+2021/07/08 18:44:57 Memory	-> NOP
+2021/07/08 18:44:57 Writeback	-> SLT R$7 R$2 R$6,  writes 0 into R$7
+2021/07/08 18:44:57 Decode 	-> BEQ R$7 R$0 (1)
+2021/07/08 18:44:57 Fetch	-> Killed <Branch in the pipeline>
+2021/07/08 18:44:57 
+
+Tik...
+2021/07/08 18:44:57 Writeback	-> NOP
+2021/07/08 18:44:57 Memory	-> NOP
+2021/07/08 18:44:57 Decode 	-> NOP
+2021/07/08 18:44:57 Fetch	-> Killed <Branch in the pipeline>
+2021/07/08 18:44:57 Execute	-> BEQ R$7 R$0 (1), aluOut: 1
+2021/07/08 18:44:57 
+
+Tik...
+2021/07/08 18:44:57 Writeback	-> NOP
+2021/07/08 18:44:57 Decode 	-> NOP
+2021/07/08 18:44:57 Execute	-> NOP
+2021/07/08 18:44:57 Fetch	-> Killed <Branch in the pipeline>
+2021/07/08 18:44:58 Memory	-> BEQ R$7 R$0 (1), branch is taken
+2021/07/08 18:44:58 
+
+Tik...
+2021/07/08 18:44:58 Writeback	-> NOP
+2021/07/08 18:44:58 Memory	-> NOP
+2021/07/08 18:44:58 Execute	-> NOP
+2021/07/08 18:44:58 Decode 	-> NOP
+2021/07/08 18:44:58 Fetch	-> PC: 40, SLT R$7 R$6 R$3
+2021/07/08 18:44:58 
+
+Tik...
+2021/07/08 18:44:58 Memory	-> NOP
+2021/07/08 18:44:58 Execute	-> NOP
+2021/07/08 18:44:58 Decode 	-> SLT R$7 R$6 R$3
+2021/07/08 18:44:58 Writeback	-> BEQ R$7 R$0 (1) ,no write to register file
+2021/07/08 18:44:58 Fetch	-> PC: 44, BEQ R$7 R$0 (1)
+2021/07/08 18:44:58 
+
+Tik...
+2021/07/08 18:44:58 Memory	-> NOP
+2021/07/08 18:44:58 Decode 	-> BEQ R$7 R$0 (1)
+2021/07/08 18:44:58 Writeback	-> NOP
+2021/07/08 18:44:58 Fetch	-> Stall
+2021/07/08 18:44:58 Execute	-> SLT R$7 R$6 R$3, aluOut: 1
+2021/07/08 18:44:58 
+
+Tik...
+2021/07/08 18:44:58 Writeback	-> NOP
+2021/07/08 18:44:58 Memory	-> SLT R$7 R$6 R$3
+2021/07/08 18:44:58 Decode 	-> BEQ R$7 R$0 (1)
+2021/07/08 18:44:58 Execute	-> NOP
+2021/07/08 18:44:58 Fetch	-> Stall
+2021/07/08 18:44:58 
+
+Tik...
+2021/07/08 18:44:58 Execute	-> NOP
+2021/07/08 18:44:58 Memory	-> NOP
+2021/07/08 18:44:58 Writeback	-> SLT R$7 R$6 R$3,  writes 1 into R$7
+2021/07/08 18:44:58 Decode 	-> BEQ R$7 R$0 (1)
+2021/07/08 18:44:58 Fetch	-> Killed <Branch in the pipeline>
+2021/07/08 18:44:59 
+
+Tik...
+2021/07/08 18:44:59 Writeback	-> NOP
+2021/07/08 18:44:59 Memory	-> NOP
+2021/07/08 18:44:59 Decode 	-> NOP
+2021/07/08 18:44:59 Fetch	-> Killed <Branch in the pipeline>
+2021/07/08 18:44:59 Execute	-> BEQ R$7 R$0 (1), aluOut: 0
+2021/07/08 18:44:59 
+
+Tik...
+2021/07/08 18:44:59 Writeback	-> NOP
+2021/07/08 18:44:59 Memory	-> BEQ R$7 R$0 (1), branch is NOT taken
+2021/07/08 18:44:59 Decode 	-> NOP
+2021/07/08 18:44:59 Execute	-> NOP
+2021/07/08 18:44:59 Fetch	-> PC: 48, ADD R$3 R$0 R$6
+2021/07/08 18:44:59 
+
+Tik...
+2021/07/08 18:44:59 Execute	-> NOP
+2021/07/08 18:44:59 Memory	-> NOP
+2021/07/08 18:44:59 Decode 	-> ADD R$3 R$0 R$6
+2021/07/08 18:44:59 Writeback	-> BEQ R$7 R$0 (1) ,no write to register file
+2021/07/08 18:44:59 Fetch	-> PC: 52, ADDI R$4 R$4 (1)
+2021/07/08 18:44:59 
+
+Tik...
+2021/07/08 18:44:59 Writeback	-> NOP
+2021/07/08 18:44:59 Memory	-> NOP
+2021/07/08 18:44:59 Decode 	-> ADDI R$4 R$4 (1)
+2021/07/08 18:44:59 Fetch	-> PC: 56, ADDI R$5 R$5 (4)
+2021/07/08 18:44:59 Execute	-> ADD R$3 R$0 R$6, aluOut: -2625421
+2021/07/08 18:44:59 
+
+Tik...
+2021/07/08 18:44:59 Decode 	-> ADDI R$5 R$5 (4)
+2021/07/08 18:44:59 Writeback	-> NOP
+2021/07/08 18:44:59 Memory	-> ADD R$3 R$0 R$6
+2021/07/08 18:44:59 Fetch	-> PC: 60, J 5
+2021/07/08 18:44:59 [*Fetch*] -> jump to PC: 20
+2021/07/08 18:45:00 Execute	-> ADDI R$4 R$4 (1), aluOut: 5
+2021/07/08 18:45:00 
+
+Tik...
+2021/07/08 18:45:00 Memory	-> ADDI R$4 R$4 (1)
+2021/07/08 18:45:00 Writeback	-> ADD R$3 R$0 R$6,  writes -2625421 into R$3
+2021/07/08 18:45:00 Decode 	-> NOP
+2021/07/08 18:45:00 Fetch	-> PC: 20, BEQ R$1 R$4 (11)
+2021/07/08 18:45:00 Execute	-> ADDI R$5 R$5 (4), aluOut: 136
+2021/07/08 18:45:00 
+
+Tik...
+2021/07/08 18:45:00 Memory	-> ADDI R$5 R$5 (4)
+2021/07/08 18:45:00 Decode 	-> BEQ R$1 R$4 (11)
+2021/07/08 18:45:00 Writeback	-> ADDI R$4 R$4 (1),  writes 5 into R$4
+2021/07/08 18:45:00 Execute	-> NOP
+2021/07/08 18:45:00 Fetch	-> Killed <Branch in the pipeline>
+2021/07/08 18:45:00 
+
+Tik...
+2021/07/08 18:45:00 Memory	-> NOP
+2021/07/08 18:45:00 Writeback	-> ADDI R$5 R$5 (4),  writes 136 into R$5
+2021/07/08 18:45:00 Decode 	-> NOP
+2021/07/08 18:45:00 Fetch	-> Killed <Branch in the pipeline>
+2021/07/08 18:45:00 Execute	-> BEQ R$1 R$4 (11), aluOut: 0
+2021/07/08 18:45:00 
+
+Tik...
+2021/07/08 18:45:00 Writeback	-> NOP
+2021/07/08 18:45:00 Memory	-> BEQ R$1 R$4 (11), branch is NOT taken
+2021/07/08 18:45:00 Decode 	-> NOP
+2021/07/08 18:45:00 Execute	-> NOP
+2021/07/08 18:45:00 Fetch	-> PC: 24, LW R$6 R$5 (0)
+2021/07/08 18:45:00 
+
+Tik...
+2021/07/08 18:45:00 Execute	-> NOP
+2021/07/08 18:45:00 Memory	-> NOP
+2021/07/08 18:45:00 Decode 	-> LW R$6 R$5 (0)
+2021/07/08 18:45:00 Writeback	-> BEQ R$1 R$4 (11) ,no write to register file
+2021/07/08 18:45:00 Fetch	-> PC: 28, SLT R$7 R$2 R$6
+2021/07/08 18:45:01 
+
+Tik...
+2021/07/08 18:45:01 Writeback	-> NOP
+2021/07/08 18:45:01 Decode 	-> SLT R$7 R$2 R$6
+2021/07/08 18:45:01 Memory	-> NOP
+2021/07/08 18:45:01 Fetch	-> Stall
+2021/07/08 18:45:01 Execute	-> LW R$6 R$5 (0), aluOut: 136
+2021/07/08 18:45:01 
+
+Tik...
+2021/07/08 18:45:01 Writeback	-> NOP
+2021/07/08 18:45:01 Memory	-> LW R$6 R$5 (0), load 1256781 from memory loction(136)
+2021/07/08 18:45:01 Execute	-> NOP
+2021/07/08 18:45:01 Decode 	-> SLT R$7 R$2 R$6
+2021/07/08 18:45:01 Fetch	-> Stall
+2021/07/08 18:45:01 
+
+Tik...
+2021/07/08 18:45:01 Writeback	-> LW R$6 R$5 (0),  writes 1256781 into R$6
+2021/07/08 18:45:01 Execute	-> NOP
+2021/07/08 18:45:01 Memory	-> NOP
+2021/07/08 18:45:01 Decode 	-> SLT R$7 R$2 R$6
+2021/07/08 18:45:01 Fetch	-> PC: 32, BEQ R$7 R$0 (1)
+2021/07/08 18:45:01 
+
+Tik...
+2021/07/08 18:45:01 Memory	-> NOP
+2021/07/08 18:45:01 Decode 	-> BEQ R$7 R$0 (1)
+2021/07/08 18:45:01 Writeback	-> NOP
+2021/07/08 18:45:01 Fetch	-> Stall
+2021/07/08 18:45:01 Execute	-> SLT R$7 R$2 R$6, aluOut: 1
+2021/07/08 18:45:01 
+
+Tik...
+2021/07/08 18:45:01 Writeback	-> NOP
+2021/07/08 18:45:01 Memory	-> SLT R$7 R$2 R$6
+2021/07/08 18:45:01 Decode 	-> BEQ R$7 R$0 (1)
+2021/07/08 18:45:01 Execute	-> NOP
+2021/07/08 18:45:01 Fetch	-> Stall
+2021/07/08 18:45:02 
+
+Tik...
+2021/07/08 18:45:02 Execute	-> NOP
+2021/07/08 18:45:02 Writeback	-> SLT R$7 R$2 R$6,  writes 1 into R$7
+2021/07/08 18:45:02 Memory	-> NOP
+2021/07/08 18:45:02 Decode 	-> BEQ R$7 R$0 (1)
+2021/07/08 18:45:02 Fetch	-> Killed <Branch in the pipeline>
+2021/07/08 18:45:02 
+
+Tik...
+2021/07/08 18:45:02 Memory	-> NOP
+2021/07/08 18:45:02 Decode 	-> NOP
+2021/07/08 18:45:02 Writeback	-> NOP
+2021/07/08 18:45:02 Fetch	-> Killed <Branch in the pipeline>
+2021/07/08 18:45:02 Execute	-> BEQ R$7 R$0 (1), aluOut: 0
+2021/07/08 18:45:02 
+
+Tik...
+2021/07/08 18:45:02 Writeback	-> NOP
+2021/07/08 18:45:02 Memory	-> BEQ R$7 R$0 (1), branch is NOT taken
+2021/07/08 18:45:02 Execute	-> NOP
+2021/07/08 18:45:02 Decode 	-> NOP
+2021/07/08 18:45:02 Fetch	-> PC: 36, ADD R$2 R$0 R$6
+2021/07/08 18:45:02 
+
+Tik...
+2021/07/08 18:45:02 Execute	-> NOP
+2021/07/08 18:45:02 Memory	-> NOP
+2021/07/08 18:45:02 Decode 	-> ADD R$2 R$0 R$6
+2021/07/08 18:45:02 Writeback	-> BEQ R$7 R$0 (1) ,no write to register file
+2021/07/08 18:45:02 Fetch	-> PC: 40, SLT R$7 R$6 R$3
+2021/07/08 18:45:02 
+
+Tik...
+2021/07/08 18:45:02 Writeback	-> NOP
+2021/07/08 18:45:02 Memory	-> NOP
+2021/07/08 18:45:02 Decode 	-> SLT R$7 R$6 R$3
+2021/07/08 18:45:02 Fetch	-> PC: 44, BEQ R$7 R$0 (1)
+2021/07/08 18:45:03 Execute	-> ADD R$2 R$0 R$6, aluOut: 1256781
+2021/07/08 18:45:03 
+
+Tik...
+2021/07/08 18:45:03 Decode 	-> BEQ R$7 R$0 (1)
+2021/07/08 18:45:03 Writeback	-> NOP
+2021/07/08 18:45:03 Memory	-> ADD R$2 R$0 R$6
+2021/07/08 18:45:03 Fetch	-> Stall
+2021/07/08 18:45:03 Execute	-> SLT R$7 R$6 R$3, aluOut: 0
+2021/07/08 18:45:03 
+
+Tik...
+2021/07/08 18:45:03 Execute	-> NOP
+2021/07/08 18:45:03 Memory	-> SLT R$7 R$6 R$3
+2021/07/08 18:45:03 Decode 	-> BEQ R$7 R$0 (1)
+2021/07/08 18:45:03 Writeback	-> ADD R$2 R$0 R$6,  writes 1256781 into R$2
+2021/07/08 18:45:03 Fetch	-> Stall
+2021/07/08 18:45:03 
+
+Tik...
+2021/07/08 18:45:03 Execute	-> NOP
+2021/07/08 18:45:03 Memory	-> NOP
+2021/07/08 18:45:03 Decode 	-> BEQ R$7 R$0 (1)
+2021/07/08 18:45:03 Writeback	-> SLT R$7 R$6 R$3,  writes 0 into R$7
+2021/07/08 18:45:03 Fetch	-> Stall
+2021/07/08 18:45:03 
+
+Tik...
+2021/07/08 18:45:03 Execute	-> NOP
+2021/07/08 18:45:03 Memory	-> NOP
+2021/07/08 18:45:03 Writeback	-> NOP
+2021/07/08 18:45:03 Decode 	-> BEQ R$7 R$0 (1)
+2021/07/08 18:45:03 Fetch	-> Killed <Branch in the pipeline>
+2021/07/08 18:45:03 
+
+Tik...
+2021/07/08 18:45:03 Writeback	-> NOP
+2021/07/08 18:45:03 Memory	-> NOP
+2021/07/08 18:45:03 Decode 	-> NOP
+2021/07/08 18:45:03 Fetch	-> Killed <Branch in the pipeline>
+2021/07/08 18:45:04 Execute	-> BEQ R$7 R$0 (1), aluOut: 1
+2021/07/08 18:45:04 
+
+Tik...
+2021/07/08 18:45:04 Execute	-> NOP
+2021/07/08 18:45:04 Decode 	-> NOP
+2021/07/08 18:45:04 Writeback	-> NOP
+2021/07/08 18:45:04 Fetch	-> Killed <Branch in the pipeline>
+2021/07/08 18:45:04 Memory	-> BEQ R$7 R$0 (1), branch is taken
+2021/07/08 18:45:04 
+
+Tik...
+2021/07/08 18:45:04 Writeback	-> NOP
+2021/07/08 18:45:04 Memory	-> NOP
+2021/07/08 18:45:04 Decode 	-> NOP
+2021/07/08 18:45:04 Execute	-> NOP
+2021/07/08 18:45:04 Fetch	-> PC: 52, ADDI R$4 R$4 (1)
+2021/07/08 18:45:04 
+
+Tik...
+2021/07/08 18:45:04 Memory	-> NOP
+2021/07/08 18:45:04 Execute	-> NOP
+2021/07/08 18:45:04 Decode 	-> ADDI R$4 R$4 (1)
+2021/07/08 18:45:04 Writeback	-> BEQ R$7 R$0 (1) ,no write to register file
+2021/07/08 18:45:04 Fetch	-> PC: 56, ADDI R$5 R$5 (4)
+2021/07/08 18:45:04 
+
+Tik...
+2021/07/08 18:45:04 Memory	-> NOP
+2021/07/08 18:45:04 Writeback	-> NOP
+2021/07/08 18:45:04 Decode 	-> ADDI R$5 R$5 (4)
+2021/07/08 18:45:04 Fetch	-> PC: 60, J 5
+2021/07/08 18:45:04 [*Fetch*] -> jump to PC: 20
+2021/07/08 18:45:04 Execute	-> ADDI R$4 R$4 (1), aluOut: 6
+2021/07/08 18:45:04 
+
+Tik...
+2021/07/08 18:45:04 Writeback	-> NOP
+2021/07/08 18:45:04 Decode 	-> NOP
+2021/07/08 18:45:04 Memory	-> ADDI R$4 R$4 (1)
+2021/07/08 18:45:04 Fetch	-> PC: 20, BEQ R$1 R$4 (11)
+2021/07/08 18:45:05 Execute	-> ADDI R$5 R$5 (4), aluOut: 140
+2021/07/08 18:45:05 
+
+Tik...
+2021/07/08 18:45:05 Writeback	-> ADDI R$4 R$4 (1),  writes 6 into R$4
+2021/07/08 18:45:05 Execute	-> NOP
+2021/07/08 18:45:05 Decode 	-> BEQ R$1 R$4 (11)
+2021/07/08 18:45:05 Memory	-> ADDI R$5 R$5 (4)
+2021/07/08 18:45:05 Fetch	-> Killed <Branch in the pipeline>
+2021/07/08 18:45:05 
+
+Tik...
+2021/07/08 18:45:05 Memory	-> NOP
+2021/07/08 18:45:05 Writeback	-> ADDI R$5 R$5 (4),  writes 140 into R$5
+2021/07/08 18:45:05 Decode 	-> NOP
+2021/07/08 18:45:05 Fetch	-> Killed <Branch in the pipeline>
+2021/07/08 18:45:05 Execute	-> BEQ R$1 R$4 (11), aluOut: 0
+2021/07/08 18:45:05 
+
+Tik...
+2021/07/08 18:45:05 Writeback	-> NOP
+2021/07/08 18:45:05 Decode 	-> NOP
+2021/07/08 18:45:05 Execute	-> NOP
+2021/07/08 18:45:05 Memory	-> BEQ R$1 R$4 (11), branch is NOT taken
+2021/07/08 18:45:05 Fetch	-> PC: 24, LW R$6 R$5 (0)
+2021/07/08 18:45:05 
+
+Tik...
+2021/07/08 18:45:05 Writeback	-> BEQ R$1 R$4 (11) ,no write to register file
+2021/07/08 18:45:05 Memory	-> NOP
+2021/07/08 18:45:05 Execute	-> NOP
+2021/07/08 18:45:05 Decode 	-> LW R$6 R$5 (0)
+2021/07/08 18:45:05 Fetch	-> PC: 28, SLT R$7 R$2 R$6
+2021/07/08 18:45:05 
+
+Tik...
+2021/07/08 18:45:05 Memory	-> NOP
+2021/07/08 18:45:05 Writeback	-> NOP
+2021/07/08 18:45:05 Decode 	-> SLT R$7 R$2 R$6
+2021/07/08 18:45:05 Fetch	-> Stall
+2021/07/08 18:45:06 Execute	-> LW R$6 R$5 (0), aluOut: 140
+2021/07/08 18:45:06 
+
+Tik...
+2021/07/08 18:45:06 Writeback	-> NOP
+2021/07/08 18:45:06 Execute	-> NOP
+2021/07/08 18:45:06 Decode 	-> SLT R$7 R$2 R$6
+2021/07/08 18:45:06 Memory	-> LW R$6 R$5 (0), load 3 from memory loction(140)
+2021/07/08 18:45:06 Fetch	-> Stall
+2021/07/08 18:45:06 
+
+Tik...
+2021/07/08 18:45:06 Execute	-> NOP
+2021/07/08 18:45:06 Memory	-> NOP
+2021/07/08 18:45:06 Decode 	-> SLT R$7 R$2 R$6
+2021/07/08 18:45:06 Writeback	-> LW R$6 R$5 (0),  writes 3 into R$6
+2021/07/08 18:45:06 Fetch	-> Stall
+2021/07/08 18:45:06 
+
+Tik...
+2021/07/08 18:45:06 Execute	-> NOP
+2021/07/08 18:45:06 Memory	-> NOP
+2021/07/08 18:45:06 Writeback	-> NOP
+2021/07/08 18:45:06 Decode 	-> SLT R$7 R$2 R$6
+2021/07/08 18:45:06 Fetch	-> PC: 32, BEQ R$7 R$0 (1)
+2021/07/08 18:45:06 
+
+Tik...
+2021/07/08 18:45:06 Writeback	-> NOP
+2021/07/08 18:45:06 Memory	-> NOP
+2021/07/08 18:45:06 Decode 	-> BEQ R$7 R$0 (1)
+2021/07/08 18:45:06 Fetch	-> Stall
+2021/07/08 18:45:06 Execute	-> SLT R$7 R$2 R$6, aluOut: 0
+2021/07/08 18:45:06 
+
+Tik...
+2021/07/08 18:45:06 Execute	-> NOP
+2021/07/08 18:45:06 Memory	-> SLT R$7 R$2 R$6
+2021/07/08 18:45:06 Decode 	-> BEQ R$7 R$0 (1)
+2021/07/08 18:45:06 Writeback	-> NOP
+2021/07/08 18:45:06 Fetch	-> Stall
+2021/07/08 18:45:07 
+
+Tik...
+2021/07/08 18:45:07 Writeback	-> SLT R$7 R$2 R$6,  writes 0 into R$7
+2021/07/08 18:45:07 Memory	-> NOP
+2021/07/08 18:45:07 Decode 	-> BEQ R$7 R$0 (1)
+2021/07/08 18:45:07 Execute	-> NOP
+2021/07/08 18:45:07 Fetch	-> Killed <Branch in the pipeline>
+2021/07/08 18:45:07 
+
+Tik...
+2021/07/08 18:45:07 Memory	-> NOP
+2021/07/08 18:45:07 Writeback	-> NOP
+2021/07/08 18:45:07 Decode 	-> NOP
+2021/07/08 18:45:07 Fetch	-> Killed <Branch in the pipeline>
+2021/07/08 18:45:07 Execute	-> BEQ R$7 R$0 (1), aluOut: 1
+2021/07/08 18:45:07 
+
+Tik...
+2021/07/08 18:45:07 Execute	-> NOP
+2021/07/08 18:45:07 Decode 	-> NOP
+2021/07/08 18:45:07 Writeback	-> NOP
+2021/07/08 18:45:07 Fetch	-> Killed <Branch in the pipeline>
+2021/07/08 18:45:07 Memory	-> BEQ R$7 R$0 (1), branch is taken
+2021/07/08 18:45:07 
+
+Tik...
+2021/07/08 18:45:07 Writeback	-> NOP
+2021/07/08 18:45:07 Memory	-> NOP
+2021/07/08 18:45:07 Execute	-> NOP
+2021/07/08 18:45:07 Decode 	-> NOP
+2021/07/08 18:45:07 Fetch	-> PC: 40, SLT R$7 R$6 R$3
+2021/07/08 18:45:07 
+
+Tik...
+2021/07/08 18:45:07 Execute	-> NOP
+2021/07/08 18:45:07 Memory	-> NOP
+2021/07/08 18:45:07 Decode 	-> SLT R$7 R$6 R$3
+2021/07/08 18:45:07 Writeback	-> BEQ R$7 R$0 (1) ,no write to register file
+2021/07/08 18:45:07 Fetch	-> PC: 44, BEQ R$7 R$0 (1)
+2021/07/08 18:45:08 
+
+Tik...
+2021/07/08 18:45:08 Writeback	-> NOP
+2021/07/08 18:45:08 Decode 	-> BEQ R$7 R$0 (1)
+2021/07/08 18:45:08 Memory	-> NOP
+2021/07/08 18:45:08 Fetch	-> Stall
+2021/07/08 18:45:08 Execute	-> SLT R$7 R$6 R$3, aluOut: 0
+2021/07/08 18:45:08 
+
+Tik...
+2021/07/08 18:45:08 Writeback	-> NOP
+2021/07/08 18:45:08 Execute	-> NOP
+2021/07/08 18:45:08 Decode 	-> BEQ R$7 R$0 (1)
+2021/07/08 18:45:08 Memory	-> SLT R$7 R$6 R$3
+2021/07/08 18:45:08 Fetch	-> Stall
+2021/07/08 18:45:08 
+
+Tik...
+2021/07/08 18:45:08 Memory	-> NOP
+2021/07/08 18:45:08 Writeback	-> SLT R$7 R$6 R$3,  writes 0 into R$7
+2021/07/08 18:45:08 Decode 	-> BEQ R$7 R$0 (1)
+2021/07/08 18:45:08 Execute	-> NOP
+2021/07/08 18:45:08 Fetch	-> Killed <Branch in the pipeline>
+2021/07/08 18:45:08 
+
+Tik...
+2021/07/08 18:45:08 Memory	-> NOP
+2021/07/08 18:45:08 Decode 	-> NOP
+2021/07/08 18:45:08 Writeback	-> NOP
+2021/07/08 18:45:08 Fetch	-> Killed <Branch in the pipeline>
+2021/07/08 18:45:08 Execute	-> BEQ R$7 R$0 (1), aluOut: 1
+2021/07/08 18:45:08 
+
+Tik...
+2021/07/08 18:45:08 Decode 	-> NOP
+2021/07/08 18:45:08 Execute	-> NOP
+2021/07/08 18:45:08 Writeback	-> NOP
+2021/07/08 18:45:08 Fetch	-> Killed <Branch in the pipeline>
+2021/07/08 18:45:09 Memory	-> BEQ R$7 R$0 (1), branch is taken
+2021/07/08 18:45:09 
+
+Tik...
+2021/07/08 18:45:09 Writeback	-> NOP
+2021/07/08 18:45:09 Memory	-> NOP
+2021/07/08 18:45:09 Execute	-> NOP
+2021/07/08 18:45:09 Decode 	-> NOP
+2021/07/08 18:45:09 Fetch	-> PC: 52, ADDI R$4 R$4 (1)
+2021/07/08 18:45:09 
+
+Tik...
+2021/07/08 18:45:09 Writeback	-> BEQ R$7 R$0 (1) ,no write to register file
+2021/07/08 18:45:09 Execute	-> NOP
+2021/07/08 18:45:09 Memory	-> NOP
+2021/07/08 18:45:09 Decode 	-> ADDI R$4 R$4 (1)
+2021/07/08 18:45:09 Fetch	-> PC: 56, ADDI R$5 R$5 (4)
+2021/07/08 18:45:09 
+
+Tik...
+2021/07/08 18:45:09 Writeback	-> NOP
+2021/07/08 18:45:09 Memory	-> NOP
+2021/07/08 18:45:09 Decode 	-> ADDI R$5 R$5 (4)
+2021/07/08 18:45:09 Fetch	-> PC: 60, J 5
+2021/07/08 18:45:09 [*Fetch*] -> jump to PC: 20
+2021/07/08 18:45:09 Execute	-> ADDI R$4 R$4 (1), aluOut: 7
+2021/07/08 18:45:09 
+
+Tik...
+2021/07/08 18:45:09 Writeback	-> NOP
+2021/07/08 18:45:09 Decode 	-> NOP
+2021/07/08 18:45:09 Memory	-> ADDI R$4 R$4 (1)
+2021/07/08 18:45:09 Fetch	-> PC: 20, BEQ R$1 R$4 (11)
+2021/07/08 18:45:09 Execute	-> ADDI R$5 R$5 (4), aluOut: 144
+2021/07/08 18:45:09 
+
+Tik...
+2021/07/08 18:45:09 Memory	-> ADDI R$5 R$5 (4)
+2021/07/08 18:45:09 Decode 	-> BEQ R$1 R$4 (11)
+2021/07/08 18:45:09 Execute	-> NOP
+2021/07/08 18:45:09 Writeback	-> ADDI R$4 R$4 (1),  writes 7 into R$4
+2021/07/08 18:45:09 Fetch	-> Killed <Branch in the pipeline>
+2021/07/08 18:45:10 
+
+Tik...
+2021/07/08 18:45:10 Memory	-> NOP
+2021/07/08 18:45:10 Writeback	-> ADDI R$5 R$5 (4),  writes 144 into R$5
+2021/07/08 18:45:10 Decode 	-> NOP
+2021/07/08 18:45:10 Fetch	-> Killed <Branch in the pipeline>
+2021/07/08 18:45:10 Execute	-> BEQ R$1 R$4 (11), aluOut: 0
+2021/07/08 18:45:10 
+
+Tik...
+2021/07/08 18:45:10 Execute	-> NOP
+2021/07/08 18:45:10 Decode 	-> NOP
+2021/07/08 18:45:10 Memory	-> BEQ R$1 R$4 (11), branch is NOT taken
+2021/07/08 18:45:10 Writeback	-> NOP
+2021/07/08 18:45:10 Fetch	-> PC: 24, LW R$6 R$5 (0)
+2021/07/08 18:45:10 
+
+Tik...
+2021/07/08 18:45:10 Writeback	-> BEQ R$1 R$4 (11) ,no write to register file
+2021/07/08 18:45:10 Execute	-> NOP
+2021/07/08 18:45:10 Decode 	-> LW R$6 R$5 (0)
+2021/07/08 18:45:10 Memory	-> NOP
+2021/07/08 18:45:10 Fetch	-> PC: 28, SLT R$7 R$2 R$6
+2021/07/08 18:45:10 
+
+Tik...
+2021/07/08 18:45:10 Memory	-> NOP
+2021/07/08 18:45:10 Writeback	-> NOP
+2021/07/08 18:45:10 Decode 	-> SLT R$7 R$2 R$6
+2021/07/08 18:45:10 Fetch	-> Stall
+2021/07/08 18:45:10 Execute	-> LW R$6 R$5 (0), aluOut: 144
+2021/07/08 18:45:10 
+
+Tik...
+2021/07/08 18:45:10 Execute	-> NOP
+2021/07/08 18:45:10 Memory	-> LW R$6 R$5 (0), load 0 from memory loction(144)
+2021/07/08 18:45:10 Decode 	-> SLT R$7 R$2 R$6
+2021/07/08 18:45:10 Writeback	-> NOP
+2021/07/08 18:45:10 Fetch	-> Stall
+2021/07/08 18:45:11 
+
+Tik...
+2021/07/08 18:45:11 Execute	-> NOP
+2021/07/08 18:45:11 Memory	-> NOP
+2021/07/08 18:45:11 Writeback	-> LW R$6 R$5 (0),  writes 0 into R$6
+2021/07/08 18:45:11 Decode 	-> SLT R$7 R$2 R$6
+2021/07/08 18:45:11 Fetch	-> PC: 32, BEQ R$7 R$0 (1)
+2021/07/08 18:45:11 
+
+Tik...
+2021/07/08 18:45:11 Memory	-> NOP
+2021/07/08 18:45:11 Writeback	-> NOP
+2021/07/08 18:45:11 Decode 	-> BEQ R$7 R$0 (1)
+2021/07/08 18:45:11 Fetch	-> Stall
+2021/07/08 18:45:11 Execute	-> SLT R$7 R$2 R$6, aluOut: 0
+2021/07/08 18:45:11 
+
+Tik...
+2021/07/08 18:45:11 Writeback	-> NOP
+2021/07/08 18:45:11 Memory	-> SLT R$7 R$2 R$6
+2021/07/08 18:45:11 Decode 	-> BEQ R$7 R$0 (1)
+2021/07/08 18:45:11 Execute	-> NOP
+2021/07/08 18:45:11 Fetch	-> Stall
+2021/07/08 18:45:11 
+
+Tik...
+2021/07/08 18:45:11 Writeback	-> SLT R$7 R$2 R$6,  writes 0 into R$7
+2021/07/08 18:45:11 Decode 	-> BEQ R$7 R$0 (1)
+2021/07/08 18:45:11 Execute	-> NOP
+2021/07/08 18:45:11 Memory	-> NOP
+2021/07/08 18:45:11 Fetch	-> Killed <Branch in the pipeline>
+2021/07/08 18:45:11 
+
+Tik...
+2021/07/08 18:45:11 Memory	-> NOP
+2021/07/08 18:45:11 Writeback	-> NOP
+2021/07/08 18:45:11 Decode 	-> NOP
+2021/07/08 18:45:11 Fetch	-> Killed <Branch in the pipeline>
+2021/07/08 18:45:12 Execute	-> BEQ R$7 R$0 (1), aluOut: 1
+2021/07/08 18:45:12 
+
+Tik...
+2021/07/08 18:45:12 Execute	-> NOP
+2021/07/08 18:45:12 Decode 	-> NOP
+2021/07/08 18:45:12 Writeback	-> NOP
+2021/07/08 18:45:12 Fetch	-> Killed <Branch in the pipeline>
+2021/07/08 18:45:12 Memory	-> BEQ R$7 R$0 (1), branch is taken
+2021/07/08 18:45:12 
+
+Tik...
+2021/07/08 18:45:12 Writeback	-> NOP
+2021/07/08 18:45:12 Memory	-> NOP
+2021/07/08 18:45:12 Decode 	-> NOP
+2021/07/08 18:45:12 Execute	-> NOP
+2021/07/08 18:45:12 Fetch	-> PC: 40, SLT R$7 R$6 R$3
+2021/07/08 18:45:12 
+
+Tik...
+2021/07/08 18:45:12 Writeback	-> BEQ R$7 R$0 (1) ,no write to register file
+2021/07/08 18:45:12 Memory	-> NOP
+2021/07/08 18:45:12 Execute	-> NOP
+2021/07/08 18:45:12 Decode 	-> SLT R$7 R$6 R$3
+2021/07/08 18:45:12 Fetch	-> PC: 44, BEQ R$7 R$0 (1)
+2021/07/08 18:45:12 
+
+Tik...
+2021/07/08 18:45:12 Writeback	-> NOP
+2021/07/08 18:45:12 Decode 	-> BEQ R$7 R$0 (1)
+2021/07/08 18:45:12 Memory	-> NOP
+2021/07/08 18:45:12 Fetch	-> Stall
+2021/07/08 18:45:12 Execute	-> SLT R$7 R$6 R$3, aluOut: 0
+2021/07/08 18:45:12 
+
+Tik...
+2021/07/08 18:45:12 Execute	-> NOP
+2021/07/08 18:45:12 Decode 	-> BEQ R$7 R$0 (1)
+2021/07/08 18:45:12 Memory	-> SLT R$7 R$6 R$3
+2021/07/08 18:45:12 Writeback	-> NOP
+2021/07/08 18:45:12 Fetch	-> Stall
+2021/07/08 18:45:13 
+
+Tik...
+2021/07/08 18:45:13 Execute	-> NOP
+2021/07/08 18:45:13 Memory	-> NOP
+2021/07/08 18:45:13 Writeback	-> SLT R$7 R$6 R$3,  writes 0 into R$7
+2021/07/08 18:45:13 Decode 	-> BEQ R$7 R$0 (1)
+2021/07/08 18:45:13 Fetch	-> Killed <Branch in the pipeline>
+2021/07/08 18:45:13 
+
+Tik...
+2021/07/08 18:45:13 Writeback	-> NOP
+2021/07/08 18:45:13 Decode 	-> NOP
+2021/07/08 18:45:13 Memory	-> NOP
+2021/07/08 18:45:13 Fetch	-> Killed <Branch in the pipeline>
+2021/07/08 18:45:13 Execute	-> BEQ R$7 R$0 (1), aluOut: 1
+2021/07/08 18:45:13 
+
+Tik...
+2021/07/08 18:45:13 Writeback	-> NOP
+2021/07/08 18:45:13 Execute	-> NOP
+2021/07/08 18:45:13 Decode 	-> NOP
+2021/07/08 18:45:13 Fetch	-> Killed <Branch in the pipeline>
+2021/07/08 18:45:13 Memory	-> BEQ R$7 R$0 (1), branch is taken
+2021/07/08 18:45:13 
+
+Tik...
+2021/07/08 18:45:13 Writeback	-> NOP
+2021/07/08 18:45:13 Memory	-> NOP
+2021/07/08 18:45:13 Execute	-> NOP
+2021/07/08 18:45:13 Decode 	-> NOP
+2021/07/08 18:45:13 Fetch	-> PC: 52, ADDI R$4 R$4 (1)
+2021/07/08 18:45:13 
+
+Tik...
+2021/07/08 18:45:13 Writeback	-> BEQ R$7 R$0 (1) ,no write to register file
+2021/07/08 18:45:13 Decode 	-> ADDI R$4 R$4 (1)
+2021/07/08 18:45:13 Execute	-> NOP
+2021/07/08 18:45:13 Memory	-> NOP
+2021/07/08 18:45:13 Fetch	-> PC: 56, ADDI R$5 R$5 (4)
+2021/07/08 18:45:14 
+
+Tik...
+2021/07/08 18:45:14 Writeback	-> NOP
+2021/07/08 18:45:14 Decode 	-> ADDI R$5 R$5 (4)
+2021/07/08 18:45:14 Memory	-> NOP
+2021/07/08 18:45:14 Fetch	-> PC: 60, J 5
+2021/07/08 18:45:14 [*Fetch*] -> jump to PC: 20
+2021/07/08 18:45:14 Execute	-> ADDI R$4 R$4 (1), aluOut: 8
+2021/07/08 18:45:14 
+
+Tik...
+2021/07/08 18:45:14 Decode 	-> NOP
+2021/07/08 18:45:14 Memory	-> ADDI R$4 R$4 (1)
+2021/07/08 18:45:14 Writeback	-> NOP
+2021/07/08 18:45:14 Fetch	-> PC: 20, BEQ R$1 R$4 (11)
+2021/07/08 18:45:14 Execute	-> ADDI R$5 R$5 (4), aluOut: 148
+2021/07/08 18:45:14 
+
+Tik...
+2021/07/08 18:45:14 Execute	-> NOP
+2021/07/08 18:45:14 Decode 	-> BEQ R$1 R$4 (11)
+2021/07/08 18:45:14 Memory	-> ADDI R$5 R$5 (4)
+2021/07/08 18:45:14 Writeback	-> ADDI R$4 R$4 (1),  writes 8 into R$4
+2021/07/08 18:45:14 Fetch	-> Stall
+2021/07/08 18:45:14 
+
+Tik...
+2021/07/08 18:45:14 Execute	-> NOP
+2021/07/08 18:45:14 Memory	-> NOP
+2021/07/08 18:45:14 Decode 	-> BEQ R$1 R$4 (11)
+2021/07/08 18:45:14 Writeback	-> ADDI R$5 R$5 (4),  writes 148 into R$5
+2021/07/08 18:45:14 Fetch	-> Killed <Branch in the pipeline>
+2021/07/08 18:45:14 
+
+Tik...
+2021/07/08 18:45:14 Writeback	-> NOP
+2021/07/08 18:45:14 Decode 	-> NOP
+2021/07/08 18:45:14 Memory	-> NOP
+2021/07/08 18:45:14 Fetch	-> Killed <Branch in the pipeline>
+2021/07/08 18:45:15 Execute	-> BEQ R$1 R$4 (11), aluOut: 0
+2021/07/08 18:45:15 
+
+Tik...
+2021/07/08 18:45:15 Writeback	-> NOP
+2021/07/08 18:45:15 Memory	-> BEQ R$1 R$4 (11), branch is NOT taken
+2021/07/08 18:45:15 Decode 	-> NOP
+2021/07/08 18:45:15 Execute	-> NOP
+2021/07/08 18:45:15 Fetch	-> PC: 24, LW R$6 R$5 (0)
+2021/07/08 18:45:15 
+
+Tik...
+2021/07/08 18:45:15 Writeback	-> BEQ R$1 R$4 (11) ,no write to register file
+2021/07/08 18:45:15 Execute	-> NOP
+2021/07/08 18:45:15 Decode 	-> LW R$6 R$5 (0)
+2021/07/08 18:45:15 Memory	-> NOP
+2021/07/08 18:45:15 Fetch	-> PC: 28, SLT R$7 R$2 R$6
+2021/07/08 18:45:15 
+
+Tik...
+2021/07/08 18:45:15 Decode 	-> SLT R$7 R$2 R$6
+2021/07/08 18:45:15 Writeback	-> NOP
+2021/07/08 18:45:15 Memory	-> NOP
+2021/07/08 18:45:15 Fetch	-> Stall
+2021/07/08 18:45:15 Execute	-> LW R$6 R$5 (0), aluOut: 148
+2021/07/08 18:45:15 
+
+Tik...
+2021/07/08 18:45:15 Writeback	-> NOP
+2021/07/08 18:45:15 Decode 	-> SLT R$7 R$2 R$6
+2021/07/08 18:45:15 Execute	-> NOP
+2021/07/08 18:45:15 Memory	-> LW R$6 R$5 (0), load 9 from memory loction(148)
+2021/07/08 18:45:15 Fetch	-> Stall
+2021/07/08 18:45:15 
+
+Tik...
+2021/07/08 18:45:15 Writeback	-> LW R$6 R$5 (0),  writes 9 into R$6
+2021/07/08 18:45:15 Memory	-> NOP
+2021/07/08 18:45:15 Decode 	-> SLT R$7 R$2 R$6
+2021/07/08 18:45:15 Execute	-> NOP
+2021/07/08 18:45:15 Fetch	-> PC: 32, BEQ R$7 R$0 (1)
+2021/07/08 18:45:16 
+
+Tik...
+2021/07/08 18:45:16 Writeback	-> NOP
+2021/07/08 18:45:16 Decode 	-> BEQ R$7 R$0 (1)
+2021/07/08 18:45:16 Memory	-> NOP
+2021/07/08 18:45:16 Fetch	-> Stall
+2021/07/08 18:45:16 Execute	-> SLT R$7 R$2 R$6, aluOut: 0
+2021/07/08 18:45:16 
+
+Tik...
+2021/07/08 18:45:16 Writeback	-> NOP
+2021/07/08 18:45:16 Memory	-> SLT R$7 R$2 R$6
+2021/07/08 18:45:16 Execute	-> NOP
+2021/07/08 18:45:16 Decode 	-> BEQ R$7 R$0 (1)
+2021/07/08 18:45:16 Fetch	-> Stall
+2021/07/08 18:45:16 
+
+Tik...
+2021/07/08 18:45:16 Writeback	-> SLT R$7 R$2 R$6,  writes 0 into R$7
+2021/07/08 18:45:16 Decode 	-> BEQ R$7 R$0 (1)
+2021/07/08 18:45:16 Execute	-> NOP
+2021/07/08 18:45:16 Memory	-> NOP
+2021/07/08 18:45:16 Fetch	-> Killed <Branch in the pipeline>
+2021/07/08 18:45:16 
+
+Tik...
+2021/07/08 18:45:16 Writeback	-> NOP
+2021/07/08 18:45:16 Decode 	-> NOP
+2021/07/08 18:45:16 Memory	-> NOP
+2021/07/08 18:45:16 Fetch	-> Killed <Branch in the pipeline>
+2021/07/08 18:45:16 Execute	-> BEQ R$7 R$0 (1), aluOut: 1
+2021/07/08 18:45:16 
+
+Tik...
+2021/07/08 18:45:16 Execute	-> NOP
+2021/07/08 18:45:16 Decode 	-> NOP
+2021/07/08 18:45:16 Writeback	-> NOP
+2021/07/08 18:45:16 Fetch	-> Killed <Branch in the pipeline>
+2021/07/08 18:45:17 Memory	-> BEQ R$7 R$0 (1), branch is taken
+2021/07/08 18:45:17 
+
+Tik...
+2021/07/08 18:45:17 Writeback	-> NOP
+2021/07/08 18:45:17 Memory	-> NOP
+2021/07/08 18:45:17 Execute	-> NOP
+2021/07/08 18:45:17 Decode 	-> NOP
+2021/07/08 18:45:17 Fetch	-> PC: 40, SLT R$7 R$6 R$3
+2021/07/08 18:45:17 
+
+Tik...
+2021/07/08 18:45:17 Writeback	-> BEQ R$7 R$0 (1) ,no write to register file
+2021/07/08 18:45:17 Decode 	-> SLT R$7 R$6 R$3
+2021/07/08 18:45:17 Execute	-> NOP
+2021/07/08 18:45:17 Memory	-> NOP
+2021/07/08 18:45:17 Fetch	-> PC: 44, BEQ R$7 R$0 (1)
+2021/07/08 18:45:17 
+
+Tik...
+2021/07/08 18:45:17 Writeback	-> NOP
+2021/07/08 18:45:17 Decode 	-> BEQ R$7 R$0 (1)
+2021/07/08 18:45:17 Memory	-> NOP
+2021/07/08 18:45:17 Fetch	-> Stall
+2021/07/08 18:45:17 Execute	-> SLT R$7 R$6 R$3, aluOut: 0
+2021/07/08 18:45:17 
+
+Tik...
+2021/07/08 18:45:17 Execute	-> NOP
+2021/07/08 18:45:17 Memory	-> SLT R$7 R$6 R$3
+2021/07/08 18:45:17 Decode 	-> BEQ R$7 R$0 (1)
+2021/07/08 18:45:17 Writeback	-> NOP
+2021/07/08 18:45:17 Fetch	-> Stall
+2021/07/08 18:45:17 
+
+Tik...
+2021/07/08 18:45:17 Writeback	-> SLT R$7 R$6 R$3,  writes 0 into R$7
+2021/07/08 18:45:17 Execute	-> NOP
+2021/07/08 18:45:17 Memory	-> NOP
+2021/07/08 18:45:17 Decode 	-> BEQ R$7 R$0 (1)
+2021/07/08 18:45:17 Fetch	-> Killed <Branch in the pipeline>
+2021/07/08 18:45:18 
+
+Tik...
+2021/07/08 18:45:18 Writeback	-> NOP
+2021/07/08 18:45:18 Memory	-> NOP
+2021/07/08 18:45:18 Decode 	-> NOP
+2021/07/08 18:45:18 Fetch	-> Killed <Branch in the pipeline>
+2021/07/08 18:45:18 Execute	-> BEQ R$7 R$0 (1), aluOut: 1
+2021/07/08 18:45:18 
+
+Tik...
+2021/07/08 18:45:18 Writeback	-> NOP
+2021/07/08 18:45:18 Execute	-> NOP
+2021/07/08 18:45:18 Decode 	-> NOP
+2021/07/08 18:45:18 Fetch	-> Killed <Branch in the pipeline>
+2021/07/08 18:45:18 Memory	-> BEQ R$7 R$0 (1), branch is taken
+2021/07/08 18:45:18 
+
+Tik...
+2021/07/08 18:45:18 Writeback	-> NOP
+2021/07/08 18:45:18 Memory	-> NOP
+2021/07/08 18:45:18 Execute	-> NOP
+2021/07/08 18:45:18 Decode 	-> NOP
+2021/07/08 18:45:18 Fetch	-> PC: 52, ADDI R$4 R$4 (1)
+2021/07/08 18:45:18 
+
+Tik...
+2021/07/08 18:45:18 Execute	-> NOP
+2021/07/08 18:45:18 Memory	-> NOP
+2021/07/08 18:45:18 Decode 	-> ADDI R$4 R$4 (1)
+2021/07/08 18:45:18 Writeback	-> BEQ R$7 R$0 (1) ,no write to register file
+2021/07/08 18:45:18 Fetch	-> PC: 56, ADDI R$5 R$5 (4)
+2021/07/08 18:45:18 
+
+Tik...
+2021/07/08 18:45:18 Writeback	-> NOP
+2021/07/08 18:45:18 Memory	-> NOP
+2021/07/08 18:45:18 Decode 	-> ADDI R$5 R$5 (4)
+2021/07/08 18:45:18 Fetch	-> PC: 60, J 5
+2021/07/08 18:45:18 [*Fetch*] -> jump to PC: 20
+2021/07/08 18:45:19 Execute	-> ADDI R$4 R$4 (1), aluOut: 9
+2021/07/08 18:45:19 
+
+Tik...
+2021/07/08 18:45:19 Writeback	-> NOP
+2021/07/08 18:45:19 Memory	-> ADDI R$4 R$4 (1)
+2021/07/08 18:45:19 Decode 	-> NOP
+2021/07/08 18:45:19 Fetch	-> PC: 20, BEQ R$1 R$4 (11)
+2021/07/08 18:45:19 Execute	-> ADDI R$5 R$5 (4), aluOut: 152
+2021/07/08 18:45:19 
+
+Tik...
+2021/07/08 18:45:19 Writeback	-> ADDI R$4 R$4 (1),  writes 9 into R$4
+2021/07/08 18:45:19 Memory	-> ADDI R$5 R$5 (4)
+2021/07/08 18:45:19 Execute	-> NOP
+2021/07/08 18:45:19 Decode 	-> BEQ R$1 R$4 (11)
+2021/07/08 18:45:19 Fetch	-> Killed <Branch in the pipeline>
+2021/07/08 18:45:19 
+
+Tik...
+2021/07/08 18:45:19 Writeback	-> ADDI R$5 R$5 (4),  writes 152 into R$5
+2021/07/08 18:45:19 Decode 	-> NOP
+2021/07/08 18:45:19 Memory	-> NOP
+2021/07/08 18:45:19 Fetch	-> Killed <Branch in the pipeline>
+2021/07/08 18:45:19 Execute	-> BEQ R$1 R$4 (11), aluOut: 0
+2021/07/08 18:45:19 
+
+Tik...
+2021/07/08 18:45:19 Writeback	-> NOP
+2021/07/08 18:45:19 Memory	-> BEQ R$1 R$4 (11), branch is NOT taken
+2021/07/08 18:45:19 Decode 	-> NOP
+2021/07/08 18:45:19 Execute	-> NOP
+2021/07/08 18:45:19 Fetch	-> PC: 24, LW R$6 R$5 (0)
+2021/07/08 18:45:19 
+
+Tik...
+2021/07/08 18:45:19 Execute	-> NOP
+2021/07/08 18:45:19 Memory	-> NOP
+2021/07/08 18:45:19 Writeback	-> BEQ R$1 R$4 (11) ,no write to register file
+2021/07/08 18:45:19 Decode 	-> LW R$6 R$5 (0)
+2021/07/08 18:45:19 Fetch	-> PC: 28, SLT R$7 R$2 R$6
+2021/07/08 18:45:20 
+
+Tik...
+2021/07/08 18:45:20 Memory	-> NOP
+2021/07/08 18:45:20 Decode 	-> SLT R$7 R$2 R$6
+2021/07/08 18:45:20 Writeback	-> NOP
+2021/07/08 18:45:20 Fetch	-> Stall
+2021/07/08 18:45:20 Execute	-> LW R$6 R$5 (0), aluOut: 152
+2021/07/08 18:45:20 
+
+Tik...
+2021/07/08 18:45:20 Writeback	-> NOP
+2021/07/08 18:45:20 Memory	-> LW R$6 R$5 (0), load -23 from memory loction(152)
+2021/07/08 18:45:20 Execute	-> NOP
+2021/07/08 18:45:20 Decode 	-> SLT R$7 R$2 R$6
+2021/07/08 18:45:20 Fetch	-> Stall
+2021/07/08 18:45:20 
+
+Tik...
+2021/07/08 18:45:20 Writeback	-> LW R$6 R$5 (0),  writes -23 into R$6
+2021/07/08 18:45:20 Memory	-> NOP
+2021/07/08 18:45:20 Execute	-> NOP
+2021/07/08 18:45:20 Decode 	-> SLT R$7 R$2 R$6
+2021/07/08 18:45:20 Fetch	-> PC: 32, BEQ R$7 R$0 (1)
+2021/07/08 18:45:20 
+
+Tik...
+2021/07/08 18:45:20 Decode 	-> BEQ R$7 R$0 (1)
+2021/07/08 18:45:20 Memory	-> NOP
+2021/07/08 18:45:20 Writeback	-> NOP
+2021/07/08 18:45:20 Fetch	-> Stall
+2021/07/08 18:45:20 Execute	-> SLT R$7 R$2 R$6, aluOut: 0
+2021/07/08 18:45:20 
+
+Tik...
+2021/07/08 18:45:20 Writeback	-> NOP
+2021/07/08 18:45:20 Execute	-> NOP
+2021/07/08 18:45:20 Memory	-> SLT R$7 R$2 R$6
+2021/07/08 18:45:20 Decode 	-> BEQ R$7 R$0 (1)
+2021/07/08 18:45:20 Fetch	-> Stall
+2021/07/08 18:45:21 
+
+Tik...
+2021/07/08 18:45:21 Writeback	-> SLT R$7 R$2 R$6,  writes 0 into R$7
+2021/07/08 18:45:21 Memory	-> NOP
+2021/07/08 18:45:21 Execute	-> NOP
+2021/07/08 18:45:21 Decode 	-> BEQ R$7 R$0 (1)
+2021/07/08 18:45:21 Fetch	-> Killed <Branch in the pipeline>
+2021/07/08 18:45:21 
+
+Tik...
+2021/07/08 18:45:21 Writeback	-> NOP
+2021/07/08 18:45:21 Memory	-> NOP
+2021/07/08 18:45:21 Decode 	-> NOP
+2021/07/08 18:45:21 Fetch	-> Killed <Branch in the pipeline>
+2021/07/08 18:45:21 Execute	-> BEQ R$7 R$0 (1), aluOut: 1
+2021/07/08 18:45:21 
+
+Tik...
+2021/07/08 18:45:21 Execute	-> NOP
+2021/07/08 18:45:21 Decode 	-> NOP
+2021/07/08 18:45:21 Writeback	-> NOP
+2021/07/08 18:45:21 Fetch	-> Killed <Branch in the pipeline>
+2021/07/08 18:45:21 Memory	-> BEQ R$7 R$0 (1), branch is taken
+2021/07/08 18:45:21 
+
+Tik...
+2021/07/08 18:45:21 Writeback	-> NOP
+2021/07/08 18:45:21 Memory	-> NOP
+2021/07/08 18:45:21 Decode 	-> NOP
+2021/07/08 18:45:21 Execute	-> NOP
+2021/07/08 18:45:21 Fetch	-> PC: 40, SLT R$7 R$6 R$3
+2021/07/08 18:45:21 
+
+Tik...
+2021/07/08 18:45:21 Writeback	-> BEQ R$7 R$0 (1) ,no write to register file
+2021/07/08 18:45:21 Execute	-> NOP
+2021/07/08 18:45:21 Memory	-> NOP
+2021/07/08 18:45:21 Decode 	-> SLT R$7 R$6 R$3
+2021/07/08 18:45:21 Fetch	-> PC: 44, BEQ R$7 R$0 (1)
+2021/07/08 18:45:22 
+
+Tik...
+2021/07/08 18:45:22 Writeback	-> NOP
+2021/07/08 18:45:22 Memory	-> NOP
+2021/07/08 18:45:22 Decode 	-> BEQ R$7 R$0 (1)
+2021/07/08 18:45:22 Fetch	-> Stall
+2021/07/08 18:45:22 Execute	-> SLT R$7 R$6 R$3, aluOut: 0
+2021/07/08 18:45:22 
+
+Tik...
+2021/07/08 18:45:22 Execute	-> NOP
+2021/07/08 18:45:22 Decode 	-> BEQ R$7 R$0 (1)
+2021/07/08 18:45:22 Memory	-> SLT R$7 R$6 R$3
+2021/07/08 18:45:22 Writeback	-> NOP
+2021/07/08 18:45:22 Fetch	-> Stall
+2021/07/08 18:45:22 
+
+Tik...
+2021/07/08 18:45:22 Execute	-> NOP
+2021/07/08 18:45:22 Memory	-> NOP
+2021/07/08 18:45:22 Decode 	-> BEQ R$7 R$0 (1)
+2021/07/08 18:45:22 Writeback	-> SLT R$7 R$6 R$3,  writes 0 into R$7
+2021/07/08 18:45:22 Fetch	-> Stall
+2021/07/08 18:45:22 
+
+Tik...
+2021/07/08 18:45:22 Writeback	-> NOP
+2021/07/08 18:45:22 Execute	-> NOP
+2021/07/08 18:45:22 Memory	-> NOP
+2021/07/08 18:45:22 Decode 	-> BEQ R$7 R$0 (1)
+2021/07/08 18:45:22 Fetch	-> Killed <Branch in the pipeline>
+2021/07/08 18:45:22 
+
+Tik...
+2021/07/08 18:45:22 Writeback	-> NOP
+2021/07/08 18:45:22 Memory	-> NOP
+2021/07/08 18:45:22 Decode 	-> NOP
+2021/07/08 18:45:22 Fetch	-> Killed <Branch in the pipeline>
+2021/07/08 18:45:23 Execute	-> BEQ R$7 R$0 (1), aluOut: 1
+2021/07/08 18:45:23 
+
+Tik...
+2021/07/08 18:45:23 Writeback	-> NOP
+2021/07/08 18:45:23 Decode 	-> NOP
+2021/07/08 18:45:23 Execute	-> NOP
+2021/07/08 18:45:23 Fetch	-> Killed <Branch in the pipeline>
+2021/07/08 18:45:23 Memory	-> BEQ R$7 R$0 (1), branch is taken
+2021/07/08 18:45:23 
+
+Tik...
+2021/07/08 18:45:23 Writeback	-> NOP
+2021/07/08 18:45:23 Memory	-> NOP
+2021/07/08 18:45:23 Decode 	-> NOP
+2021/07/08 18:45:23 Execute	-> NOP
+2021/07/08 18:45:23 Fetch	-> PC: 52, ADDI R$4 R$4 (1)
+2021/07/08 18:45:23 
+
+Tik...
+2021/07/08 18:45:23 Writeback	-> BEQ R$7 R$0 (1) ,no write to register file
+2021/07/08 18:45:23 Execute	-> NOP
+2021/07/08 18:45:23 Memory	-> NOP
+2021/07/08 18:45:23 Decode 	-> ADDI R$4 R$4 (1)
+2021/07/08 18:45:23 Fetch	-> PC: 56, ADDI R$5 R$5 (4)
+2021/07/08 18:45:23 
+
+Tik...
+2021/07/08 18:45:23 Writeback	-> NOP
+2021/07/08 18:45:23 Decode 	-> ADDI R$5 R$5 (4)
+2021/07/08 18:45:23 Memory	-> NOP
+2021/07/08 18:45:23 Fetch	-> PC: 60, J 5
+2021/07/08 18:45:23 [*Fetch*] -> jump to PC: 20
+2021/07/08 18:45:23 Execute	-> ADDI R$4 R$4 (1), aluOut: 10
+2021/07/08 18:45:23 
+
+Tik...
+2021/07/08 18:45:23 Writeback	-> NOP
+2021/07/08 18:45:23 Memory	-> ADDI R$4 R$4 (1)
+2021/07/08 18:45:23 Decode 	-> NOP
+2021/07/08 18:45:23 Fetch	-> PC: 20, BEQ R$1 R$4 (11)
+2021/07/08 18:45:24 Execute	-> ADDI R$5 R$5 (4), aluOut: 156
+2021/07/08 18:45:24 
+
+Tik...
+2021/07/08 18:45:24 Writeback	-> ADDI R$4 R$4 (1),  writes 10 into R$4
+2021/07/08 18:45:24 Decode 	-> BEQ R$1 R$4 (11)
+2021/07/08 18:45:24 Execute	-> NOP
+2021/07/08 18:45:24 Memory	-> ADDI R$5 R$5 (4)
+2021/07/08 18:45:24 Fetch	-> Killed <Branch in the pipeline>
+2021/07/08 18:45:24 
+
+Tik...
+2021/07/08 18:45:24 Writeback	-> ADDI R$5 R$5 (4),  writes 156 into R$5
+2021/07/08 18:45:24 Decode 	-> NOP
+2021/07/08 18:45:24 Memory	-> NOP
+2021/07/08 18:45:24 Fetch	-> Killed <Branch in the pipeline>
+2021/07/08 18:45:24 Execute	-> BEQ R$1 R$4 (11), aluOut: 1
+2021/07/08 18:45:24 
+
+Tik...
+2021/07/08 18:45:24 Writeback	-> NOP
+2021/07/08 18:45:24 Decode 	-> NOP
+2021/07/08 18:45:24 Execute	-> NOP
+2021/07/08 18:45:24 Fetch	-> Killed <Branch in the pipeline>
+2021/07/08 18:45:24 Memory	-> BEQ R$1 R$4 (11), branch is taken
+2021/07/08 18:45:24 
+
+Tik...
+2021/07/08 18:45:24 Writeback	-> NOP
+2021/07/08 18:45:24 Memory	-> NOP
+2021/07/08 18:45:24 Execute	-> NOP
+2021/07/08 18:45:24 Decode 	-> NOP
+2021/07/08 18:45:24 Fetch	-> PC: 68, SW R$2 R$0 (156)
+2021/07/08 18:45:24 
+
+Tik...
+2021/07/08 18:45:24 Execute	-> NOP
+2021/07/08 18:45:24 Memory	-> NOP
+2021/07/08 18:45:24 Decode 	-> SW R$2 R$0 (156)
+2021/07/08 18:45:24 Writeback	-> BEQ R$1 R$4 (11) ,no write to register file
+2021/07/08 18:45:24 Fetch	-> PC: 72, SW R$3 R$0 (160)
+2021/07/08 18:45:25 
+
+Tik...
+2021/07/08 18:45:25 Writeback	-> NOP
+2021/07/08 18:45:25 Memory	-> NOP
+2021/07/08 18:45:25 Decode 	-> SW R$3 R$0 (160)
+2021/07/08 18:45:25 Fetch	-> PC: 76, no instruction to fetch
+2021/07/08 18:45:25 Execute	-> SW R$2 R$0 (156), aluOut: 156
+2021/07/08 18:45:25 
+
+Tik...
+2021/07/08 18:45:25 Writeback	-> NOP
+2021/07/08 18:45:25 Memory	-> SW R$2 R$0 (156), writes 1256781 into memory location (156)
+2021/07/08 18:45:25 Decode 	-> NOP
+2021/07/08 18:45:25 Fetch	-> PC: 76, no instruction to fetch
+2021/07/08 18:45:25 Execute	-> SW R$3 R$0 (160), aluOut: 160
+2021/07/08 18:45:25 
+
+Tik...
+2021/07/08 18:45:25 Writeback	-> SW R$2 R$0 (156) ,no write to register file
+2021/07/08 18:45:25 Decode 	-> NOP
+2021/07/08 18:45:25 Execute	-> NOP
+2021/07/08 18:45:25 Memory	-> SW R$3 R$0 (160), writes -2625421 into memory location (160)
+2021/07/08 18:45:25 Fetch	-> PC: 76, no instruction to fetch
+2021/07/08 18:45:25 
+
+Tik...
+2021/07/08 18:45:25 Writeback	-> SW R$3 R$0 (160) ,no write to register file
+2021/07/08 18:45:25 Memory	-> NOP
+2021/07/08 18:45:25 Execute	-> NOP
+2021/07/08 18:45:25 Decode 	-> NOP
+2021/07/08 18:45:25 Fetch	-> PC: 76, no instruction to fetch
+2021/07/08 18:45:25 
+
+Tik...
+2021/07/08 18:45:25 Writeback	-> NOP
+2021/07/08 18:45:25 Memory	-> NOP
+2021/07/08 18:45:25 Decode 	-> NOP
+2021/07/08 18:45:25 Execute	-> NOP
+2021/07/08 18:45:25 Fetch	-> PC: 76, no instruction to fetch
+2021/07/08 18:45:26 
+
+Tik...
+2021/07/08 18:45:26 Writeback	-> NOP
+2021/07/08 18:45:26 Decode 	-> NOP
+2021/07/08 18:45:26 Execute	-> NOP
+2021/07/08 18:45:26 Memory	-> NOP
+2021/07/08 18:45:26 Fetch	-> PC: 76, no instruction to fetch
+2021/07/08 18:45:26 
