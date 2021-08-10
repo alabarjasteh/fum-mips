@@ -68,5 +68,7 @@ And its equivalent binary code is:
 11111111111111111111111111101001
 ```
 
+To see the result of excuting this code, go to `results` folder.
+
 ### Run
 Go to the project's directory and enter `go build`, then type `./mips-simulator -file=<filename.txt>`. "filename" is composed of binary code of CPU instructions and data. Each of the 32-bit memory words must be on a new line. See attached example files.
